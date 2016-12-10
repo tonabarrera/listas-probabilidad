@@ -1,0 +1,102 @@
+\section{Lista 2}
+\begin{enumerate}
+	\item Se sabe que 10\% de los vasos producidos por cierta máquina tienen algún defecto. Si se seleccionan 10 vasos por ésta máquina, ¿cuál es la probabilidad de que ninguno este defectuoso?, ¿cuántos se esperaría encontrar defectuosos?
+	\\\textbf{Solución}
+	\\\text{La variable tiene una distribución binomial} \\
+	\begin{gather*}
+		n = 10 \\
+		p = 0.1 \\
+		q = 0.9 \\
+		P(x = 0) = \binom{n}{x}p^xq^{n-x} = \binom{10}{0}(0.1)^0(0.9)^{10-0} = 0.3486784401 \textit{ o 34.86\%.} \\
+	\end{gather*}
+	\begin{gather*}
+		\mu = np = (10)(0.1) = 1
+	\end{gather*}
+	
+	\item Un laberinto para ratas tiene un corredor recto, y al final una bifurcación; en la bifurcación, la debe ir a la derecha o a la izquierda. Suponer que se colocan 10 ratas,  en el laberinto, de una en una. Si cada rata toma al azar una de las dos alternativas del camino. ¿Cuál es la probabilidad de que cuando menos 9 vayan al mismo lado?
+	\\\textbf{Solución}
+	\\\text{La variable tiene una distribución binomial} \\
+	\begin{gather*}
+		n = 10 \\
+		p = 0.5 \\
+		q = 0.5 \\
+		P(x = 9) = \binom{10}{9}(0.5)^x(0.5)^{n-x} + \binom{10}{10}(0.5)^x(0.5)^{n-x} = 0.0107421875 \textit{ o 1.07\%.} 
+	\end{gather*}
+    \item En una “prueba de tortura” se enciende y se apaga un interruptor eléctrico hasta que este falla. Si la probabilidad es 0.001 de que el interruptor falle en cualquier momento en que este encendido o apagado, cual es la probabilidad de que el interruptor no falle durante las primeras 800 veces que se enciende o apague?
+    \\\textbf{Solución}
+    \\\text{La variable es de Poisson}
+    \begin{gather*}
+    n=800\\
+    p=0.001\\
+    q=0.999\\
+    \lambda = np = 800(0.001) = 0.8\\
+    P(x=0) = \frac{{\lambda}^{x}{e}^{-\lambda}}{x!}= \frac{(0.8)^{0}{e}^{-\lambda}}{0!} = \frac{1{e}^{-.8}}{1} = 0.4493289641 \text{ ó } 44.93\%
+    \end{gather*}
+    \item Un ingeniero de control de calidad inspecciona una muestra tomada al azar de dos calculadoras portátiles de cada lote de 18 unidades que llega y acepta el lote si ambas están en buenas condiciones de funcionamiento; en caso contrario, se inspecciona todo el lote y el costo se carga al distribuidos. ¿Cuál es la probabilidad de que este lote sea aceptado sin mayor inspección si contiene...
+    \begin{enumerate}
+        \item Cuatro calculadoras en mal estado?
+        \\\textbf{Solución}
+        \\\text{La variable es de hipergeometrica}
+        \begin{gather*}
+        N=18\\
+        n=2\\
+        k=18-4=14\\
+        x=2\\
+        P(2) =\frac{\binom{k}{x}\binom{N-k}{n-x}}{\binom{N}{n}} = \frac{\binom{14}{2}\binom{4}{0}}{\binom{18}{2}} = \frac{91}{153} = 0.5947712418 \text{ ó } 59.47\%
+        \end{gather*}
+        \item Ocho calculadoras en malas condiciones de funcionamiento?
+        \\\textbf{Solución}
+        \\\text{La variable es de hipergeometrica}
+        \begin{gather*}
+        N=18\\
+        n=2\\
+        k=18-8=10\\
+        x=2\\
+        P(2) =\frac{\binom{k}{x}\binom{N-k}{n-x}}{\binom{N}{n}}= \frac{\binom{10}{2}\binom{8}{0}}{\binom{18}{2}} = \frac{45}{153} =\frac{5}{17} =.294117647 \text{ ó } 29.41\%
+        \end{gather*}
+    \end{enumerate}
+    \item Un examen de opción múltiple consta de ocho preguntas y tres respuestas a cada pregunta. Si un estudiante responde a cada pregunta tirando un dado y marca la primera respuesta si obtiene un 1 o un 2, la segunda respuesta si obtiene un 3 o un 4, y la tercera respuesta si obtiene un 5 o un 6, ¿Cuál es la probabilidad de que logre exactamente cuatro respuestas correctas?
+    \\\textbf{Solución}
+    \\\text{La variable es de binomial}
+    \begin{gather*}
+    n=8\\
+    p=\frac{1}{3}\\
+    q=\frac{2}{3}\\
+    P(4) =\binom{n}{x}\left(p\right)^{x}\left(q\right)^{n-x}= \binom{8}{4}\left(\frac{1}{3}\right)^{4}\left(\frac{2}{3}\right)^{4}=0.1707056851 \text{ ó } 17.07\%
+    \end{gather*}
+    \item Si el $40\%$ de los alumnos se volvieran agresivos en un periodo de 2 horas después de haber ingerido algún liquido en el Sportaco, determine la probabilidad de que exactamente seis de los 15 alumnos que han ingerido algún líquido se vuelvan agresivos en el periodo de 2 horas.
+    \\\textbf{Solución}
+    \\\text{La variable es de binomial}
+    \begin{gather*}
+    n=15\\
+    p=0.4\\
+    q=0.6\\
+    P(6) = \binom{n}{x}\left(p\right)^{x}\left(q\right)^{n-x}=\binom{15}{6}(0.4)^{6}(0.6)^{9}=.2065976053 \text{ ó } 20.65\%
+    \end{gather*}
+    \item Un jurado de 7 jueces debe decidir entre 2 finalistas quien es la ganadora de un concurso de belleza, para lo cual bastara una mayoría de los jueces. Suponga que 4 jueces voten por María y que los otros 3 voten por Susana. Si se seleccionan al azar 3 jueces y se les pregunta por quien van a votar, ¿cuál es la probabilidad de que la mayoría de los jueces de la muestra estén a favor de María?
+    \\\textbf{Solución}
+    \\\text{La variable es de hipergeometrica}
+    \begin{gather*}
+    N=7\\
+    n=3\\
+    k=4\\
+    x=2, 3\\
+    p(2, 3) = \sum _{x=2}^{3} \frac{\binom{k}{x}\binom{N-k}{n-x}}{\binom{N}{n}} = \frac{\binom{4}{2}\binom{3}{1}}{\binom{7}{3}} + \frac{\binom{4}{3}\binom{3}{0}}{\binom{7}{3}} = \frac{22}{35} =0.6285714286 \text{ ó } 62.85\%
+    \end{gather*}
+    \item Se ha observado que el transito promedio de automóviles en determinado punto de un camino rural es de 3 por hora. Suponga que los instantes en que pasan los mismos son independientes, haciendo que x represente el numero de los que pasan por este punto en un intervalo de 20 minutos, calcule la probabilidad de $P(x > 2)$
+    \\\textbf{Solución}
+    \\\text{La variable es de Poisson}
+    \begin{gather*}
+    \lambda = np = 1 \text{ (cada 20 min)}\\
+    x>2\\
+    p(x>2) =\sum _{x=3}^{\infty }\frac{{\lambda}^{x}{e}^{-\lambda}}{x!}=\sum _{x=3}^{\infty }\frac{{1}^{x}{e}^{-1}}{x!}=1 - \sum _{x=0}^{2}\frac{{1}^{x}{e}^{-1}}{x!} = 1- \left( \frac{{e}^{-1}}{0!}+\frac{{e}^{-1}}{1!}+\frac{{e}^{-1}}{2!} \right) \\
+    = 0.08030139707 \text{ ó } 8.03\%
+    \end{gather*}
+    \item En determinada planta manufacturera han ocurrido accidentes a razón de 1 cada 2 meses. suponiendo que ocurren en forma independiente, Cual es el numero esperado de accidentes al año?
+    \\\textbf{Solución}
+    \\\text{La variable es de Poisson}
+    \begin{gather*}
+    \lambda = 1 \text{ (cada 2 meses)}\\
+    \lambda = \frac{(1 \text{ accidentes})(12 \text{ meses})}{2 \text{ meses}} = 6 \text{ accidentes}\\
+    \end{gather*}
+\end{enumerate}

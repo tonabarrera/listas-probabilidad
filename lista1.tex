@@ -1,0 +1,82 @@
+\section{Lista 1}
+\begin{enumerate}\setcounter{enumi}{21} % Para que empiece en 22
+    \item El retraso o adelanto (en minutos) de un vuelo de Guadalajara a Monterrey es una variable aleatoria cuya densidad de probabilidad esta dada por: \\
+    \begin{align*}
+    f(x)= \left\{ \begin{array}{lcc}
+    \frac{1}{288}(36 - x^2) &   si  & -6 \leq x \leq 6 \\
+    \\ 0 &  ,  & DOM
+    \end{array}
+    \right.
+    \end{align*}
+    Donde los valores negativos son indicativos de que el vuelo llega adelantado y los valores positivos señalan que el vuelo llega retrasado. Determine la probabilidad de que uno de estos vuelos llegará cuando menos dos minutos antes.
+    \\\textbf{Solución}
+    \\\text{La variable es aleatoria continua.} \\
+    \begin{gather*}
+    P(\Omega) = 1 \\
+    \frac{1}{288} \int \limits_{-6}^{6} (136-x^2) dx 
+    = \frac{1}{288}(36x - \frac{x^3}{3})  \bigg\vert_{-6}^6 = \frac{1}{288}(216 - 72 + 216 - 72) \\		
+    = \frac{1}{288}(288) = 1 \\
+    \frac{1}{288} \int \limits_{-6}^{6} (136-x^2) dx 
+    = \frac{1}{288}(36x - \frac{x^3}{3})  \bigg\vert_{-2}^{-6} = \frac{1}{288}(-72 + \frac{8}{3} + 216 - 72) = \frac{1}{288}(\frac{224}{3}) = 0.2592 \\
+    \end{gather*}
+    
+    \item Si la ganancia de un contratista en una obra de construcción puede considerarse como una variable aleatoria que tiene la densidad de probabilidad: \\
+    \begin{align*}
+    f(x)= \left\{ \begin{array}{lcc}
+    \frac{1}{18}(x + 1) &   si  & -1 \leq x \leq 5 \\
+    \\ 0 &  ,  & DOM
+    \end{array}
+    \right.
+    \end{align*}
+    Donde las utilidades se expresan en miles de pesos, ¿cuál es la utilidad esperada?
+    \\\textbf{Solución}
+    \\\text{La variable es aleatoria continua.} \\
+    \begin{gather*}
+    \frac{1}{18} \int \limits_{-1}^{5} (x+1) dx = \frac{1}{18}(\frac{x^2}{2} + x) \bigg\vert_{-1}^5 = \frac{1}{18}(\frac{25}{2} + 5 - \frac{1}{2} + 1) = 1 \\
+    \mu = \frac{1}{18} \int \limits_{-1}^{5} x(x+1) dx = \frac{1}{18}(\frac{x^3}{3} + \frac{x^2}{2}) \bigg\vert_{-1}^5 = 3 \\
+    \end{gather*}
+    Por lo tanto, la utilidad esperada es de 3. \\
+    
+    \item La probabilidad de que la Sra. Matínez venda una cadena de oro con una ganancia de \$3000 es: $ \frac{3}{20} $ . La probabilidad de que la venda y obtenga una ganancia de \$1500 es de $ \frac{7}{20} $ , la probabilidad de que salga a mano es $ \frac{7}{20} $ y la probabilidad de que pierda \$1500 es $ \frac{3}{20} $ . ¿Cuál es su ganancia esperada?
+    \\\textbf{Solución}
+    \\\text{La variable es aleatoria discreta, así:} \\
+    \begin{gather*}
+    \mu = \sum_{i = 0}^{n = 4} x_{i}f(x_{i}) = 3000*\frac{3}{20} + 1500*\frac{7}{20} + 0*\frac{7}{20} - 1500*\frac{3}{20} = 750 \\
+    \end{gather*}
+    Por lo tanto, su ganancia esperada es de \$750. \\
+    
+    \item El tiempo que tardan en atender a un individuo en una cafetería es una variable aleatoria con la densidad de probabilidad: \\
+    \begin{align*}
+    f(x)= \left\{ \begin{array}{lcc}
+    \frac{1}{4}(e^{-\frac{x}{4}}) &   si  & x > 0 \\
+    \\ 0 &  ,  & DOM
+    \end{array}
+    \right.
+    \end{align*}
+    Obtenga el valor esperado de esta distribución.
+    \\\textbf{Solución}
+    \\\text{La variable es aleatoria continua.} \\
+    \begin{gather*}
+    P(\Omega) = \int \limits_{0}^\infty (\frac{1}{4}(e^{-\frac{x}{4}})) dx = -e^{-\frac{x}{4}} \bigg\vert_{0}^{b} = \lim \limits_{b \rightarrow \infty} -e^{-\frac{b}{4}} - (-e^{0}) = 1 \\
+    \mu = \int \limits_{0}^\infty (\frac{1}{4}x(e^{-\frac{x}{4}})) dx = \frac{1}{4}(e^{-\frac{x}{4}})(-4x-16) \bigg\vert_{0}^b = \lim \limits_{b \rightarrow \infty} -e^{-\frac{b}{4}}(-4b -16) - (-e^{0})(-16) = 4 \\
+    \end{gather*}
+    Por lo tanto el valor esperado es 4. \\
+    
+    \item El número de horas de operación satisfactoria que proporciona un televisor Sonny es una variable aleatoria de z cuya función de probabilidad es: \\
+    \begin{align*}
+    f(z)= \left\{ \begin{array}{lcc}
+    0.0001e^{-0.0001z} &   si  & z > 0 \\
+    \\ 0 &  ,  & DOM
+    \end{array}
+    \right.
+    \end{align*}
+    Obtenga el valor esperado de esta distribución.
+    \\\textbf{Solución}
+    \\\text{La variable es aleatoria continua.} \\
+    \begin{gather*}
+    P(\Omega) = \int \limits_{0}^{\infty} (0.0001e^{-0.0001z}) dz = -e^{-0.0001z} \bigg\vert_{0}^{b} = \lim \limits_{b \rightarrow \infty} -e^{-0.0001b} - (-e^{0}) = 1 \\
+    \mu = \int \limits_{0}^{\infty} (0.0001ze^{-0.0001z}) dz = \frac{e{-\frac{x}{10 000}}(-10 000x - 100 000 000)}{10 000} \bigg\vert_{0}^b \\
+    = \lim \limits_{b \rightarrow \infty} \frac{e{-\frac{b}{10 000}}(-10 000b - 100 000 000)}{10 000} - \frac{e{-\frac{0}{10 000}}(-10 000(0) - 100 000 000)}{10 000} = 10 000
+    \end{gather*}
+    Por lo tanto, el valor esperado es 10 000.
+\end{enumerate}
