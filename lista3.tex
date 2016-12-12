@@ -1,0 +1,261 @@
+% !TeX spellcheck = es_ES
+\section{Lista 3}
+\begin{enumerate}
+    \item Las siguientes son las puntuaciones de una prueba de IQ obtenidas por una muestra aleatoria de 18 estudiantes de ESCOM: 
+    \begin{center} 130, \ 122, \ 119, \ 142, \ 136, \ 127, \ 120, \ 152, \ 141, \\
+        132, \ 127, \ 118, \ 150, \ 141, \ 133, \ 137, \ 129, \ 142
+    \end{center}
+    Determine un intervalo de confianza del 93\% para la puntuación promedio de todos los estudiantes de ESCOM. \\
+    
+    \textit{Solución: }
+    
+    $$ \overline{x} = \sum xf(x)= (118)\left( \frac{1}{18} \right) + (119)\left( \frac{1}{18} \right) + (120)\left( \frac{1}{18} \right) + (122)\left( \frac{1}{18} \right) + (127)\left( \frac{2}{18} \right) +  (129)\left( \frac{1}{18} \right) + $$ $$(130)\left( \frac{1}{18} \right) + (132)\left( \frac{1}{18} \right) + (133)\left( \frac{1}{18} \right) + (136)\left( \frac{1}{18} \right) + (137)\left( \frac{1}{18} \right) + (141)\left( \frac{2}{18} \right) + (142)\left( \frac{2}{18} \right) + $$ $$ (150)\left( \frac{1}{18} \right) + (152)\left( \frac{1}{18} \right)  = 133.22 $$
+    
+    $$ \sigma = \sqrt{\sigma^2} $$
+    $$ \sigma^2 = E[x^2] - \overline{x}^2 $$
+    
+    $$E[x^2] = \sum x^2 f(x)= (118)^2\left( \frac{1}{18} \right) + (119)^2\left( \frac{1}{18} \right) + (120)^2\left( \frac{1}{18} \right) + (122)^2\left( \frac{1}{18} \right) + (127)^2\left( \frac{2}{18} \right) + $$ $$ (129)^2\left( \frac{1}{18} \right) + (130)^2\left( \frac{1}{18} \right) + (132)^2\left( \frac{1}{18} \right) + (133)^2\left( \frac{1}{18} \right) + (136)^2\left( \frac{1}{18} \right) + (137)^2\left( \frac{1}{18} \right) + (141)^2\left( \frac{2}{18} \right) $$ $$ (142)^2\left( \frac{2}{18} \right) + (150)^2\left( \frac{1}{18} \right) + (152)^2\left( \frac{1}{18} \right)  = 19096.66 $$
+    \\
+    Entonces, $ \sigma^2 = 19096.66 -(133.22)^2 = 1349.09 $ y $\sigma = \sqrt{1349.09} = \pm 36.73 $ \\
+    Por lo tanto, tenemos los elementos para poder hacer un intervalo, donde: \\
+    - $ \overline{x} = 133.22$ \\ - $ \sigma = 16907.25$ \\ - $ n = 18 $ \\ - $  \alpha = 93$ \\ Entonces: 
+    $$ Z_{ \frac{100-93}{2} }  =  Z_{ \frac{7}{2} } = Z_{0.035} = -1.81 $$  $$ Z_{0.965} = 1.81 $$
+    
+    Por lo tanto, el intervalo está dado por: 
+    $$ \left( 133.22 - (1.81) \left( \frac{36.73}{\sqrt{18}} \right) \leq  \mu \leq 133.22 + (1.81) \left( \frac{36.73}{\sqrt{18}} \right) \right)  \Rightarrow  \left( 117.53 \leq \mu \leq 148.86 \right) \Rightarrow \left( 117,149 \right) $$
+    \item Un ingeniero civil quiere medir la potencia comprensiva de dos tipos diferentes de concreto. Una muestra aleatoria de 10 especimenes del primer tipo dio los datos siguientes:
+    
+    \begin{center} Tipo 1 \ 3250, \ 3268, \ 4302, \ 3184, \ 3266, \\
+        \ \ \ \ \ \ \ \ \ \ \ 3297, \ 3332, \ 3502, \ 3064, \ 3116. 
+    \end{center}
+    mientras que una muestra de 10 especimenes del segundo tipo dio los resultados siguientes:
+    
+    \begin{center} Tipo 2 \ 3094, \ 3106, \ 3004, \ 3066, \ 2984, \\
+        \ \ \ \ \ \ \ \ \ \ \ 3124, \ 3316, \ 3212, \ 3380, \ 3018. 
+    \end{center}
+    
+    Determine un intervalo de confianza del 92\% para la diferencia entre las medias. \\
+    
+    \textit{Solución: } \\
+    Para el tipo 1:
+    $$ \overline{x_{1}} = \sum x_{1}f(x_{1})= (3250)\left( \frac{1}{10} \right) + (3268)\left( \frac{1}{10} \right) + (4302)\left( \frac{1}{10} \right) + (3184)\left( \frac{1}{10} \right) + (3266)\left( \frac{1}{10} \right) $$ $$ +  (3297)\left( \frac{1}{10} \right) + (3332)\left( \frac{1}{10} \right)+ (3502)\left( \frac{1}{10} \right) + (3064)\left( \frac{1}{10} \right) + (3116)\left( \frac{1}{10} \right) = 3358.1 $$
+    \\
+    Entonces
+    
+    $$ \sigma_{1} = \sqrt{\sigma_{1}^2} $$
+    $$ \sigma_{1}^2 = E[x_{1}^2] - \overline{x_{1}}^2 $$
+    
+    $$ E[x_{1}^2] = \sum x_{1}^2f(x_{1})= (3250)^2\left( \frac{1}{10} \right) + (3268)^2\left( \frac{1}{10} \right) + (4302)^2\left( \frac{1}{10} \right) + (3184)^2\left( \frac{1}{10} \right) + (3266)^2\left( \frac{1}{10} \right) $$ $$ +  (3297)^2\left( \frac{1}{10} \right) +(3332)^2\left( \frac{1}{10} \right)+ (3502)^2\left( \frac{1}{10} \right) + (3064)^2\left( \frac{1}{10} \right) + (3116)^2\left( \frac{1}{10} \right) = 11388812.9 $$
+    
+    Entonces, $ \sigma_{1}^2 = 11388812.9 -(3358.1)^2 = 111977.29 $ y $\sigma_{1} = \sqrt{111977.29} = \pm 334.63 $ \\
+    
+    Para el tipo 2:
+    $$ \overline{x_{2}} = \sum x_{2}f(x_{2})= (3094)\left( \frac{1}{10} \right) + (3106)\left( \frac{1}{10} \right) + (3004)\left( \frac{1}{10} \right) + (3066)\left( \frac{1}{10} \right) + (2984)\left( \frac{1}{10} \right) $$ $$ +  (3124)\left( \frac{1}{10} \right) + (3316)\left( \frac{1}{10} \right)+ (3212)\left( \frac{1}{10} \right) + (3380)\left( \frac{1}{10} \right) + (3018)\left( \frac{1}{10} \right) = 3130.4 $$
+    \\
+    Entonces
+    
+    $$ \sigma_{2} = \sqrt{\sigma_{2}^2} $$
+    $$ \sigma_{2}^2 = E[x_{2}^2] - \overline{x_{2}}^2 $$
+    
+    $$ E[x_{2}^2] = \sum x_{2}^2f(x_{2})= (3094)^2\left( \frac{1}{10} \right) + (3106)^2\left( \frac{1}{10} \right) + (3004)^2\left( \frac{1}{10} \right) + (3066)^2\left( \frac{1}{10} \right) + (2984)^2\left( \frac{1}{10} \right) $$ $$ +  (3124)^2\left( \frac{1}{10} \right) +(3316)^2\left( \frac{1}{10} \right)+ (3212)^2\left( \frac{1}{10} \right) + (3380)^2\left( \frac{1}{10} \right) + (3018)^2\left( \frac{1}{10} \right) = 9815360 $$
+    
+    Entonces, $ \sigma_{2}^2 = 9815360 -(3130.4)^2 = 15955.84 $ y $\sigma_{2} = \sqrt{15955.84} = \pm 126.31 $ \\
+    
+    Por lo tanto, tenemos los elementos para poder hacer un intervalo, donde: \\
+    - $ \overline{x_{1}} = 3358.1$ \\ 
+    - $ \overline{x_{2}} = 3130.4 $ \\
+    - $ \sigma_{1} = 334.63 $ \\ 
+    - $ \sigma_{2} = 126.31 $ \\ 
+    - $ n = 10 $ \\ 
+    - $  \alpha = 92$ \\
+    
+    Entonces: 
+    $$ Z_{ \frac{100-92}{2} }  =  Z_{4} = Z_{0.04} = -1.75 $$  $$ Z_{0.96} = 1.75 $$
+    
+    Por lo tanto, el intervalo está dado por: 
+    $$ \left( ( \overline{x_{1}} - \overline{x_{2}} ) - \left( 1.75 \right) \sqrt{\frac{111977.29-15955.84}{10^2}} \leq \mu_{1} - \mu_{2} \leq    (\overline{x_{1}} - \overline{x_{2}}) + \left( 1.75 \right) \sqrt{\frac{111977.29-15955.84}{10^2}}         \right)  $$
+    
+    $$(165.0706 \leq \mu_{1} - \mu_{2} \leq 290.7293) \Rightarrow (165,291)  $$ 
+    \item Con la finalidad de estimar la proporción de recién nacidos que son varones, se registró el género de 10 000 niños recién nacidos. Si de éstos 4 000 fueron varones, determine un intervalo de confianza del 96\% para la proporción real. \\
+    
+    \textit{Solución: } \\
+    Tenemos los elementos para poder hacer un intervalo, donde: \\
+    - $ n = 10000 $ \\
+    - $ p = 0.4 $ \\ 
+    - $ q = 0.6 $ \\ 
+    - $ \alpha = 96 $ \\ \\
+    - $ \overline{x} = np = (10000)(0.4) = 4000 $ \\
+    - $ \sigma^2 = npq = (10000)(0.4)(0.6) = 2400  \Rightarrow \sigma = \sqrt{\sigma^2} = \sqrt{2400} = 48.99 $ \\
+    
+    \begin{center}
+        $ Z_{\frac{100 \pm \alpha}{2}} \Rightarrow  Z_{\frac{100-96}{2}} = Z_{0.02} = -2.05 $ y $ Z_{\frac{100+96}{2}} = Z_{0.98} = 2.05  $ 
+    \end{center}
+    Por lo tanto, el intervalo está dado por: 
+    
+    $$  \left(   4000 - (2.05)\left( \frac{48.9897}{\sqrt{10000}} \right)   \leq \mu \leq 4000 + (2.05)\left( \frac{48.9897}{\sqrt{10000}} \right)      \right)   \Rightarrow (3998,4002) $$
+    \item A un coche se le hace publicidad afirmando que tiene un rendimiento en carretera de por lo menos 30 millas por galón. Si las millas por galón que se obtuvieron en 10 experimentos son 26, 24, 20, 25, 27, 25, 28, 30, 26, 33, ¿creería usted en lo que dice la publicidad en un 90\%? \\
+    
+    \textit{Solución: } 
+    $$ \overline{x} = \sum xf(x)= (20)\left( \frac{1}{10} \right) + (24)\left( \frac{1}{10} \right) + (25)\left( \frac{2}{10} \right) + (26)\left( \frac{2}{10} \right) + (27)\left( \frac{1}{10} \right) $$ $$ +  (28)\left( \frac{1}{10} \right) + (30)\left( \frac{1}{10} \right)+ (33)\left( \frac{1}{10} \right) = 26.4 $$
+    
+    
+    $$ \sigma = \sqrt{\sigma^2} $$
+    $$ \sigma^2 = E[x^2] - \overline{x}^2 $$
+    
+    $$ E[x^2] = \sum x^2f(x)= (20^2)\left( \frac{1}{10} \right) + (24)^2\left( \frac{1}{10} \right) + (25)^2\left( \frac{2}{10} \right) + (26)^2\left( \frac{2}{10} \right) + (27)^2\left( \frac{1}{10} \right) $$ $$ +  (28)^2\left( \frac{1}{10} \right) + (30)^2\left( \frac{1}{10} \right)+ (33)^2\left( \frac{1}{10} \right) = 708 $$
+    
+    Entonces, $ \sigma^2 = 708 - (26.4)^2 = 11.04  \Rightarrow \sigma = \sqrt{\sigma^2} = \sqrt{11.04} = \pm 3.322$ \\
+    
+    \begin{center}
+        $ Z_{\frac{100 \pm \alpha}{2}} \Rightarrow  Z_{\frac{100-90}{2}} = Z_{0.05} = -1.64 $ y $ Z_{\frac{100+90}{2}} = Z_{0.95} = 1.64   $ 
+    \end{center}
+    
+    Ahora, con los datos dados $ Z = \frac{26.4 - 30}{\frac{3.322}{\sqrt{10}}} = -3.426 $ lo cual excede el rango y no es de confianza.
+    
+    \item Se sabe que el gatorade es eficiente en el 72\% de los casos en los que se usa para aliviar los efectos del laboratorio del día anterior. \\
+    Se ha desarrollado un nuevo sabor y las pruebas demuestra que fue efectivo en 42 de los 50 casos.\\
+    ¿Es esta una evidencia suficientemente fuerte paraprobar que el nuevo sabor es mas efectivo que el viejo con una confianza del 91\%?
+    \\\textbf{Solución}
+    
+    \begin{gather*}	 
+    n_{1} = 50\\
+    n_{2} = 50\\
+    \overline{x_{1}} = 36\\
+    \overline{x_{2}} = 42\\	
+    \sigma_{1}^{2} = npq =11.52\\
+    \sigma_{2}^{2} = npq =12.58\\
+    z = \frac{\overline{x_{1}} - \overline{x_{2}}}{\sqrt{\frac{\sigma_{1}^{2}}{n_{1}^{2}} + \frac{\sigma_{2}^{2}}{n_{2}^{2}}}}\\= \frac{36-42}{\sqrt{\frac{11.52}{50^{2}}}+\frac{12.18}{50^{2}}}\\
+    =\frac{-6}{0.097} = -61.85\\
+    \end{gather*}
+    \begin{center}
+         si es prueba suficiente
+    \end{center}
+
+    \item Suponga que un dispositivo determinado contiene cinco circuitos electrónicos; se supone que el tiempo(en horas) hasta que falle cada uno de los siguientes circuitos es una variable exponencial con media igual a 1000 y que el dispositivo trabaja solamente mientras trabajan los 5 circuitos.\\
+    ¿Cuál es la probabilidad de que el dispositivo trabaje al menos 100 horas?
+    \\\textbf{Solución}
+    
+    \begin{gather*}	 
+    \mu = 1000 = np = \lambda\\
+    X = 100\\
+    P(X \ge  100) = \int_{X=100}^{X=\infty} (\lambda)(e^{-\lambda X})dX=1 - \int_{X = 0}^{X = 100} (\lambda)(e^{-\lambda X})dX\\
+    = 1 - e^{-\mu X}|_{\infty}^{100}\\
+    =1 + 0 - 1 = 0
+    \end{gather*}\\
+    
+    \item Supóngase que la cantidad real de café colocada por una maquina llena de frascos de "n" onzas es una variable aleatoria con distribución normal con varianza de 0.0025 de onza.\\
+    Si solo el 3\% de los frascos van a contener menos de n onzas de café.\\
+    ¿Cuál debe de ser el contenido medio de estos frascos?.\\
+    \\\textbf{Solución}
+    
+    \begin{gather*}	 
+    Z_{\frac{100 - 97}{2}} = Z_{.015} = -2.17\\
+    Z = \frac{n -\mu}{\sigma}
+    \mu = n - Z\sigma = n + .0054
+    \end{gather*}\\
+    
+    \item Supóngase que la cantidad real de pintura colocada por una maquina llena de latas de ocho galones es una variable aleatoria con distribución normal con desviación estándar 0.0025 de onza.\\
+    Si solo el 3\% de las latas van a contener menos de 3 galones de pintura.\\
+    ¿Cuál debe de ser el contenido medio de estas latas?.\\
+    \\\textbf{Solución}
+    
+    \begin{gather*}	 
+    Z_{\frac{100 - 97}{2}} = Z_{.015} = -2.17\\
+    Z = \frac{X -\mu}{\sigma}
+    \mu = X - Z\sigma = 8.0054
+    \end{gather*}\\
+    \item El departamento de seguridad de una fabrica desea saber si el tiempo promedio real que requiere el velador para realizar una ronda nocturna es de 30 min.\\
+    Si en una muestra tomada al azar requiere de 32 rondas, el velador promedio 30.8 min con una desviación estándar de 1.5 min.\\
+    Determine con un nivel de confianza del 99\% si es evidencia suficiente para rechazar la hipotesis nula $\mu$ = 30 a favor de la hipotesis alternativa de $\mu$ $\neq$ 30
+    \\\textbf{Solución}
+    \begin{gather*}
+    n	= 32\\
+    \mu = 30.8\\
+    \sigma = 1.5\\
+    \alpha = 99\% = .99
+    \end{gather*}
+    \begin{gather*}	 
+    Z_{\frac{100 - 99}{2}} = Z_{.005} = -2.57\\
+    Z_{\frac{100 + 99}{2}} = Z_{.995} = 2.57\\
+    \end{gather*}\\
+    \begin{gather*}	 
+    z = \frac{\mu - \mu^{'}}{\frac{\sigma}{\sqrt{n}}} = \frac{30.8 - 30}{\frac{1.5}{\sqrt{32}}} = 3.016
+    \end{gather*}\\
+    \begin{center}
+         Se rechaza la hipotesis nula $\mu$ = 30•
+    \end{center}
+    
+    
+    \item El fabricante de un producto removedor de manchas afirma que su producto remueve cuando menos en 90\% de todas las manchas.\\
+    ¿Qué podemos concluir acerca de estas afirmaciones en un  95\% si el producto solo alimino 174 de 200 manchas elegidas al azar de ropa manchada?
+    \\\textbf{Solución}
+    \begin{gather*}
+    \alpha = 95\%\\
+    n	= 200\\
+    p = \frac{174}{200} = .87\\
+    q = \frac{26}{200} = .13\\
+    \end{gather*}
+    \begin{gather*}
+    \mu = np = (200)(.87) = 174\\
+    \sigma = \sqrt{npq} = \sqrt{(200)(.87)(.13)} = 4.756\\
+    \end{gather*}
+    \begin{gather*}	 
+    Z_{\frac{100 - 95}{2}} = Z_{.05} = -1.64\\
+    Z_{\frac{100 + 95}{2}} = Z_{.95} = 1.64\\
+    \end{gather*}\\
+    \begin{gather*}	 
+    (174 - 1.64(\frac{4.756}{\sqrt{200}}) \le \mu \le 174 + 1.64(\frac{4.756}{\sqrt{200}}))\\
+    (173.44 \le \mu \le 174.5528)\\
+     (173,175)\\
+    \end{gather*}\\
+    \begin{gather*}	 
+    \alpha = 95\%\\
+    n	= 200\\
+    p = \frac{174}{200} = .9\\
+    q = \frac{26}{200} = .1\\
+    \mu = 180\\
+    \sigma = 4.24\\
+    (179.5087 \le \mu \le 180.4913)\\
+     (179,180)\\
+    \end{gather*}\\
+    \begin{center}
+         no se cumple el producto\\
+    \end{center}
+    
+    \item Durante varios años, se había aplicado un examen diagnostico a todos los alumnos de tercer semestre de la ESCOM. Si 64 estudiantes seleccionados al azar tardaron en promedio 28.5 minutos en resolver el examen con una varianza de 9.3.\\
+    ¿Cuánto se esperaría que tardaran entre 27 y 32 minutos en resolver el examen?
+    \\\textbf{Solución}
+    \begin{gather*}
+    n	= 64\\
+    \mu = 28.5\\		 
+    \end{gather*}
+    \begin{gather*}
+    \sigma = \sqrt{\sigma^{2}} = \sqrt{9.3} = 3.0496\\
+    \end{gather*}
+    \begin{gather*}	 
+    Z_{min} = \frac{32 - 28.5}{3.0496} = 1.147\\
+    Z_{max} = \frac{27 - 28.5}{3.0496} = .4918\\
+    P(x) = P(1.147) - P(.4918)\\ = .872856848 - .3120669484\\ = .5607898996 = 56.07\%
+    \end{gather*}\\
+    \item Si el 23\% de todos los pacientes con presión sanguínea elevada tienen efectos colaterales nocivos por la ingesta de cierto medicamento.\\
+    Utilice la aproximación normal para obtener la probabilidad de que entre 12n de estos pacientes tratados con este medicamento unos 3n presentaran efectos colaterales nocivos
+    \\\textbf{Solución}
+    \begin{gather*}
+    "n" = 5\\
+    n	= (12)(5) = 60\\
+    Exitos : (3)(5) = 15\\
+    p = .23\\
+    q = .77\\		 
+    \end{gather*}
+    \begin{gather*}
+    \mu = np = (60)(.23) = 13.8\\
+    \sigma = \sqrt{npq} = \sqrt{(60)(.23)(.77)} = 3.856943648 = 3.857\\
+    \end{gather*}
+    \begin{gather*}	 
+    14.5 \le x \le 15.5\\	
+    Z_{min} = \frac{14.5 - 13.8}{3.857} = .1814\\
+    Z_{max} = \frac{15.5 - 13.8}{3.857} = .4407\\
+    P(14.5 \le x \le 15.5) =  P(.4407) - P(.1814)\\ = .67003144 - .57142371 = .0986077 = 9.86\%
+    \end{gather*}
+    
+\end{enumerate}
