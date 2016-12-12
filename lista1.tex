@@ -83,27 +83,30 @@
             \end{proof}
         \end{enumerate}
     \item ¿De cuantas maneras pueden formarse 5 personas para abordar un autobús, si dos de las personas se niegan a hacerlo una tras la otra?
-    \item Dos focos se mantienen encendidos hasta que se funden. Suponer que ninguno dura mas de 1600 		horas. Definir un espacio muestral adecuado para este experimento, donde se describen los siguientes eventos:\\
+    \\\textbf{Solución}\\
+    Tenemos $5!$ formas de acomodar a las personas, y $4!*2$ formas en las que 2 personas se sientan juntas por lo que.\\
+    \textbf{Combinaciones} $=5!-(4!*2)=120-48= 72 \text{ formas de formar}$
     
-    i)Ambos focos duran menos de 1000 horas     \\
-    \textbf{Solucion}\\
-    \begin{gather*}
-    A = \lbrace x,y | 0\leq x,y <1000\rbrace \\
-    \end{gather*}\\
-    ii)Ningun foco se funde antes de 1000 horas 
-    \\\textbf{Solucion}\\
-    \begin{gather*}
-    B = \lbrace x,y | 1000 < x,y \leq 1600\rbrace \\
-    \end{gather*}\\
-    iii) El menor tiempo de duracion (de los dos) es de 1000 horas
-    \\\textbf{Solucion}\\
-    \begin{gather*}
-    C = \lbrace x,y | 1000 \leq x+y \leq 1600\rbrace \\
-    \end{gather*}
-    
+    \item Dos focos se mantienen encendidos hasta que se funden. Suponer que ninguno dura mas de 1600 		horas. Definir un espacio muestral adecuado para este experimento, donde se describen los siguientes eventos:
+    \begin{enumerate}
+       \item Ambos focos duran menos de 1000 horas
+       \\\textbf{Solución}
+        \begin{gather*}
+       A = \lbrace x,y | 0\leq x,y <1000\rbrace
+       \end{gather*}
+      \item Ningún foco se funde antes de 1000 horas 
+      \\\textbf{Solución}
+      \begin{gather*}
+      B = \lbrace x,y | 1000 < x,y \leq 1600\rbrace
+      \end{gather*}
+      \item El menor tiempo de duración (de los dos) es de 1000 horas
+      \\\textbf{Solución}
+      \begin{gather*}
+      C = \lbrace x,y | 1000 \leq x+y \leq 1600\rbrace
+      \end{gather*}
+    \end{enumerate}
     \item Se inscriben Alejandro, Pedrito y Carlos en una carrera. ¿Cual es la probabilidad de que Alejandro termine antes que Carlos, si todos tienen la misma habilidad y no hay empates? 
-    \\\textbf{Solucion}
-    
+    \\\textbf{Solución}
     \begin{gather*}
     P(\Omega) = 3! = 6\\
     |\Omega| = {(A,B,C), (B,A,C), (A,C,B), (B,C,A), (C,A,B), (C,B,A)}\\
@@ -111,53 +114,50 @@
     P(A>C) = \frac{3}{6} =  \frac{1}{2} = 50\% \\        
     \end{gather*}
     
-    \item En un año determinado para elecciones nacionales deben elegirse gobernadores para 20 estados. Si se supone que en cada estado hay 2 candidatos (PT y Alianza Zapatista), ¿cual es la probabilidad de que el mismo partido gane en todos los estados?
-    \\\textbf{Solucion}\\
+    \item En un año determinado para elecciones nacionales deben elegirse gobernadores para 20 estados. Si se supone que en cada estado hay 2 candidatos (PT y Alianza Zapatista), ¿Cuál es la probabilidad de que el mismo partido gane en todos los estados?
+    \\\textbf{Solución}
     \begin{gather*}
     P(PT \cup AZ)= P(PT) + P(AZ)\\
     P(PT \cup AZ)= \frac{1}{2^{20}} + \frac{1}{2^{20}} = \frac{2}{2^{20}} = .001907\%\\
     \end{gather*}
     
-    \item Se somete a un alumno a un examen de tipo Verdadero - Falso que contiene 10 preguntas; para que apruebe, debe responder correctamente a 8 preguntas o mas. Si el estudiante esta adivinando,  ¿Cual es la probabilidad de que apruebe el examen?
-    \\\textbf{Solucion}
-    
+    \item Se somete a un alumno a un examen de tipo Verdadero - Falso que contiene 10 preguntas; para que apruebe, debe responder correctamente a 8 preguntas o mas. Si el estudiante esta adivinando,  ¿Cuál es la probabilidad de que apruebe el examen?
+    \\\textbf{Solución}
     \begin{gather*}
     P|8| = \binom{10}{8}(\frac{1}{2})^8(\frac{1}{2})^2 = \frac{45}{1024}\\
     P|9| = \binom{10}{9}(\frac{1}{2})^9(\frac{1}{2})^1 = \frac{10}{1024}\\
     P|9| = \binom{10}{10}(\frac{1}{2})^{10}(\frac{1}{2})^0 = \frac{1}{1024}\\
     P(8 \cup 9 \cup 10) = \frac{56}{1024} = 5.46\% 
     \end{gather*}
-    
-    \item En el curso de Plastilina II se distribuye un examen con 10 preguntas de opcion multiple. Para aprobarlo, se requiere responder correctamente a 7 o mas de las preguntas. Si se supone que esta adivinando la respuesta en cada pregunta, ¿Cual es la probabilidad de aprobar el examen si las primeras 5 preguntas tienen 3 respuestas ocionales y las ultimas 5 preguntas tienen 4 respuestas opcionales?
-    \\\textbf{Solucion}\\
-    7p:
+    \item En el curso de Plastilina II se distribuye un examen con 10 preguntas de opción múltiple Para aprobarlo, se requiere responder correctamente a 7 o mas de las preguntas. Si se supone que esta adivinando la respuesta en cada pregunta, ¿Cuál es la probabilidad de aprobar el examen si las primeras 5 preguntas tienen 3 respuestas opcionales y las ultimas 5 preguntas tienen 4 respuestas opcionales?
+    \\\textbf{Solución}\\
+    7 preguntas:
     \begin{gather*}
-    5p 2p = \binom{5}{5}(\frac{1}{3})^{5}(\frac{2}{3})^0 + \binom{5}{2}(\frac{1}{4})^{2}(\frac{3}{4})^3\\
-    4p 3p = \binom{5}{4}(\frac{1}{3})^{4}(\frac{2}{3})^1 + \binom{5}{3}(\frac{1}{4})^{3}(\frac{3}{4})^2\\
-    3p 4p = \binom{5}{3}(\frac{1}{3})^{3}(\frac{2}{3})^2 + \binom{5}{4}(\frac{1}{4})^{4}(\frac{3}{4})^1\\
-    2p 5p = \binom{5}{2}(\frac{1}{3})^{2}(\frac{2}{3})^3 + \binom{5}{5}(\frac{1}{4})^{5}(\frac{3}{4})^0\\
+    5p-2p = \binom{5}{5}(\frac{1}{3})^{5}(\frac{2}{3})^0 + \binom{5}{2}(\frac{1}{4})^{2}(\frac{3}{4})^3\\
+    4p-3p = \binom{5}{4}(\frac{1}{3})^{4}(\frac{2}{3})^1 + \binom{5}{3}(\frac{1}{4})^{3}(\frac{3}{4})^2\\
+    3p-4p = \binom{5}{3}(\frac{1}{3})^{3}(\frac{2}{3})^2 + \binom{5}{4}(\frac{1}{4})^{4}(\frac{3}{4})^1\\
+    2p-5p = \binom{5}{2}(\frac{1}{3})^{2}(\frac{2}{3})^3 + \binom{5}{5}(\frac{1}{4})^{5}(\frac{3}{4})^0\\
     \end{gather*}
     
-    8p:
+    8 preguntas:
     \begin{gather*}
-    5p 3p = \binom{5}{5}(\frac{1}{3})^{5}(\frac{2}{3})^0 + \binom{3}{5}(\frac{1}{4})^{3}(\frac{3}{4})^2\\
-    4p 4p = \binom{5}{4}(\frac{1}{3})^{4}(\frac{2}{3})^1 + \binom{4}{5}(\frac{1}{4})^{4}(\frac{3}{4})^1\\
-    3p 5p = \binom{5}{3}(\frac{1}{3})^{3}(\frac{2}{3})^2 + \binom{5}{5}(\frac{1}{4})^{5}(\frac{3}{4})^0\\
+    5p-3p = \binom{5}{5}(\frac{1}{3})^{5}(\frac{2}{3})^0 + \binom{3}{5}(\frac{1}{4})^{3}(\frac{3}{4})^2\\
+    4p-4p = \binom{5}{4}(\frac{1}{3})^{4}(\frac{2}{3})^1 + \binom{4}{5}(\frac{1}{4})^{4}(\frac{3}{4})^1\\
+    3p-5p = \binom{5}{3}(\frac{1}{3})^{3}(\frac{2}{3})^2 + \binom{5}{5}(\frac{1}{4})^{5}(\frac{3}{4})^0\\
     \end{gather*}
     
-    9p:
+    9 preguntas:
     \begin{gather*}
-    5p 4p = \binom{5}{5}(\frac{1}{3})^{5}(\frac{2}{3})^0 + \binom{5}{4}(\frac{1}{4})^{4}(\frac{3}{4})^1\\
-    4p 5p = \binom{5}{4}(\frac{1}{3})^{4}(\frac{2}{3})^1 + \binom{5}{5}(\frac{1}{4})^{5}(\frac{3}{4})^0\\
+    5p-4p = \binom{5}{5}(\frac{1}{3})^{5}(\frac{2}{3})^0 + \binom{5}{4}(\frac{1}{4})^{4}(\frac{3}{4})^1\\
+    4p-5p = \binom{5}{4}(\frac{1}{3})^{4}(\frac{2}{3})^1 + \binom{5}{5}(\frac{1}{4})^{5}(\frac{3}{4})^0\\
     \end{gather*}
     
-    10p:
+    10 preguntas:
     \begin{gather*}
-    5p 5p = \binom{5}{5}(\frac{1}{3})^{5}(\frac{2}{3})^0 + \binom{5}{5}(\frac{1}{4})^{5}(\frac{3}{4})^0\\
+    5p-5p = \binom{5}{5}(\frac{1}{3})^{5}(\frac{2}{3})^0 + \binom{5}{5}(\frac{1}{4})^{5}(\frac{3}{4})^0\\
     \end{gather*}
-    
     \begin{gather*}
-    P(x \leq 7) = \frac{23}{31104} = 7.39x10^{-4} \text{ ó } .074%\\
+    P(x \ge 7) = \frac{23}{31104} = 7.39x10^{-4} \text{ ó } .074%\\
     \end{gather*}
     \item El departamento de investigación de una fábrica de focos ha perfeccionado un recubrimiento para los filamentos capaz de prolongar la duración de aquellos. Para comparar las duraciones de los focos nuevos con la de los focos viejos, se seleccionan 10 focos fabricados con el nuevo procedimiento y 10 normales, y se forman parejas: un foco viejo con uno nuevo. Se somete los 10 pares a prueba, y se anota cuál de los focos de cada par falla primero, si el foco nuevo o el viejo. Suponiendo que el nuevo proceso realmente no prolonga la duración de los focos, ¿cuál es la probabilidad de que el foco viejo falle primero en por lo menos 9 de los 10 pares?
     \\\textbf{Solución}
@@ -170,16 +170,17 @@
     \item Demuestre que:
     \begin{enumerate}
         \item $P(A^C \cap B) = P(B) - P(A \cap B)$
-        \\\textbf{Demostración}
-        \begin{gather*}
-        P(A^C \cap B) = P(B \cap A^C) = P((B \cap A^C) \cup \diameter) \\
-        = P((B \cap A^C) \cup (B \cap B^C)) = P(B \cap (A^C \cup B^C)) \\
-        = P(B \cap (A \cap B)^C) = P(B \backslash (A \cap B)^C) \\
-        = P(B) - P(A \cap B)
-        \end{gather*}
+        \begin{proof}
+            \begin{align*}
+            P(A^C \cap B) &= P(B \cap A^C) = P((B \cap A^C) \cup \diameter) \\
+            &= P((B \cap A^C) \cup (B \cap B^C)) = P(B \cap (A^C \cup B^C)) \\
+            &= P(B \cap (A \cap B)^C) = P(B \backslash (A \cap B)^C) \\
+            &= P(B) - P(A \cap B)
+            \end{align*}
+        \end{proof}
         
         \item Si $A \subseteq B$, entonces $P(B^C) \leq P(A^C)$
-        \\\textbf{Demostración}
+        \begin{proof}
         \begin{gather*}
         A \subseteq B \\
         P(A) \leq P(B) \\
@@ -187,27 +188,36 @@
         - P(A^C) \leq - P(B^C) \\
         P(B^C) \leq P(A^C)
         \end{gather*}
+        \end{proof}
         
         \item $P(A \cup B \cup C) = P(A \cup (B \backslash (A \cap B)) \cup (C \backslash (A \cap C)))$
-        \\\textbf{Demostración}
-        \begin{gather*}
-        P(A \cup (B \backslash (A \cap B)) \cup (C \backslash (A \cap C))) \\
-        = P(A \cup (B \cap (A \cap B)^C) \cup (C \cap (A \cap C))^C) \\
-        = P(A \cup (B \cap (A^C \cup B^C)) \cup (C \cap (A^C \cup C^C))) \\
-        = P(A \cup ((B \cap A^C) \cup (B \cap B^C)) \cup ((C \cap A^C) \cup (C \cap C^C))) \\
-        = P((A \cup (B \cap A^C) \cup (C\cap A^C)) = P(((A \cup B) \cap (A \cup A^C)) \cup C \cap A^C)) \\
-        = P((A \cup B) \cup (C \cap A^C)) = P((A \cup B \cup C) \cap (A \cup B \cup A^C)) \\
-        = P(A \cup B \cup C)
-        \end{gather*}
+        \begin{proof}
+        \begin{align*}
+        P(A \cup (B \backslash (A \cap B)) \\
+        &\cup (C \backslash (A \cap C))) \\
+        &= P(A \cup (B \cap (A \cap B)^C) \cup (C \cap (A \cap C))^C) \\
+        &= P(A \cup (B \cap (A^C \cup B^C)) \\
+        &\cup (C \cap (A^C \cup C^C))) \\
+        &= P(A \cup ((B \cap A^C) \cup (B \cap B^C)) \\
+        &\cup ((C \cap A^C) \cup (C \cap C^C))) \\
+        &= P((A \cup (B \cap A^C) \cup (C\cap A^C)) \\
+        &= P(((A \cup B) \cap (A \cup A^C)) \cup C \cap A^C)) \\
+        &= P((A \cup B) \cup (C \cap A^C)) = P((A \cup B \cup C) \cap (A \cup B \cup A^C)) \\
+        &= P(A \cup B \cup C)
+        \end{align*}
+        \end{proof}
         
         \item $P(A \cap B^C) = P(A) - P(A \cap B)$
-        \\\textbf{Demostración}
-        \begin{gather*}
-        P(A \cap B^C) = P((A \cap B^C) \cup \diameter) \\
-        = P((A \cap B^C) \cup (A \cap A^C)) = P(A \cap (B^C \cup A^C)) \\
-        = P(A \cap (B \cap A)^C) = P(A \backslash (B \cap A)) \\
-        = P(A) - P(B \cap A) = P(A) - P(A \cap B)
-        \end{gather*}
+        \begin{proof}
+        \begin{align*}
+        P(A \cap B^C) &= P((A \cap B^C) \cup \diameter) \\
+        &= P((A \cap B^C) \cup (A \cap A^C)) \\
+        &= P(A \cap (B^C \cup A^C)) \\
+        &= P(A \cap (B \cap A)^C) \\
+        &= P(A \backslash (B \cap A)) \\
+        &= P(A) - P(B \cap A) = P(A) - P(A \cap B)
+        \end{align*}
+         \end{proof}
     \end{enumerate}
     
     \item Dado un experimento en el que $P(A) = \frac{1}{2}, P(B) = \frac{1}{3}, P(A \cap B) = \frac{1}{4}$, calcular:
@@ -238,15 +248,13 @@
     \end{enumerate}
     
     \item Demuestre por inducción  ue: $$P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) \leq \sum_{i=1}^{n} P(E_i)$$
-    \\\textbf{Demostración}
-    \begin{enumerate}
-        \item Probemos para $n=1$:
+    \begin{proof}
+        Probemos para $n=1$:
         \begin{gather*}
         P(E_1) \leq \sum_{i=1}^{1} P(E_i) = P(E_1)
         \end{gather*}
-        
-        \item Supongamos que $P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) \leq \sum_{i=1}^{n} P(E_i)$ y probemos que $P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n \cup E_{n + 1}) \leq \sum_{i=1}^{n + 1} P(E_i)$:
-        Sabemos que
+        \\Supongamos que $P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) \leq \sum_{i=1}^{n} P(E_i)$ y probemos que $P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n \cup E_{n + 1}) \leq \sum_{i=1}^{n + 1} P(E_i)$
+        \\Sabemos que
         \begin{gather*}
         \sum_{i=1}^{n + 1} P(E_i) = \sum_{i=1}^{n} P(E_i) + P(E_{n + 1})
         \end{gather*}
@@ -269,11 +277,11 @@
         P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n \cup E_{n + 1}) \leq \sum_{i=1}^{n + 1} P(E_i) - P((E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) \cap E_{n + 1}) \\
         \leq \sum_{i=1}^{n + 1} P(E_i)
         \end{gather*}
-    \end{enumerate}
     Por lo tanto
     \begin{gather*}
     P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) \leq \sum_{i=1}^{n} P(E_i)
     \end{gather*}
+    \end{proof}
     
     \item Se lanzan 3 dados. Si  ninguna pareja muestra la misma cara, ¿cuál es la probabilidad de que haya un uno?
     \\\textbf{Solución}
@@ -306,9 +314,13 @@
     \end{gather*}
     \item Se tira un par de dados. Si la suma de los dos es cuando menos igual a 7. Calcule la probabilidad de que sea igual a 9.
     \\\textbf{Solución}
-    
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=5cm, height=5cm]{problema15}
+            \caption{Combinaciones posibles}
+        \end{center}
+    \end{figure}
     \begin{gather*}
-    \includegraphics{problema15}\\
     P(7\geq) = \frac{1}{6}[\frac{1}{6}(1+2+3+4+5+6)]=\frac{21}{36}\\
     P(9) = \frac{4}{36}\\
     P(9|7\geq) = \frac{P(9|7\geq)}{P(7\geq)} = \frac{\frac{4}{36}}{\frac{21}{36}} = \frac{4}{21}\text{ ó } 19.04\%
@@ -317,8 +329,13 @@
     Una persona daltónica se escoge aleatoriamente.\\
     ¿Cuál es la probabilidad de que sea hombre? (Supongamos que hay el mismo número de hombres que de mujeres)
     \\\textbf{Solución}
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[width=5cm, height=5cm]{problema16}
+            \caption{Combinaciones posibles}
+        \end{center}
+    \end{figure}
     \begin{gather*}
-    \includegraphics{problema16}\\
     P(D) = (\frac{1}{2})(\frac{5}{100})+(\frac{1}{2})(\frac{25}{10000})=\frac{525}{20000}\\
     P(H|D) = \frac{P(H \cap D)}{P(D)} = \frac{\frac{500}{20000}}{\frac{525}{20000}} = \frac{500}{525} = \frac{20}{21} \text{ ó } 95.23\%
     \end{gather*}
@@ -329,8 +346,7 @@
     r=\frac{1}{\sqrt{2}}\\
     p(A) = \frac{\frac{1}{\sqrt{2}}}{1}=\frac{1}{\sqrt{2}} \text{ ó } 70.71\%
     \end{gather*}
-    \item Se rompe una regla de 12 pulgadas al azar en 2 partes a lo largo.\\
-    ¿Cuál es la probabilidad de que la longitud de la parte más larga sea al menos el doble de la corta?
+    \item Se rompe una regla de 12 pulgadas al azar en 2 partes a lo largo. ¿Cuál es la probabilidad de que la longitud de la parte más larga sea al menos el doble de la corta?
     \\\textbf{Solución}
     \begin{gather*}
     x + y = 12\\
@@ -456,7 +472,6 @@
     \frac{1}{18} \int \limits_{-1}^{5} (x+1) dx = \frac{1}{18}(\frac{x^2}{2} + x) \bigg\vert_{-1}^5 = \frac{1}{18}(\frac{25}{2} + 5 - \frac{1}{2} + 1) = 1 \\
     \mu = \frac{1}{18} \int \limits_{-1}^{5} x(x+1) dx = \frac{1}{18}(\frac{x^3}{3} + \frac{x^2}{2}) \bigg\vert_{-1}^5 = 3 \\
     \end{gather*}
-    Por lo tanto, la utilidad esperada es de 3. \\
     
     \item La probabilidad de que la Sra. Matínez venda una cadena de oro con una ganancia de \$3000 es: $ \frac{3}{20} $ . La probabilidad de que la venda y obtenga una ganancia de \$1500 es de $ \frac{7}{20} $ , la probabilidad de que salga a mano es $ \frac{7}{20} $ y la probabilidad de que pierda \$1500 es $ \frac{3}{20} $ . ¿Cuál es su ganancia esperada?
     \\\textbf{Solución}
@@ -464,7 +479,6 @@
     \begin{gather*}
     \mu = \sum_{i = 0}^{n = 4} x_{i}f(x_{i}) = 3000*\frac{3}{20} + 1500*\frac{7}{20} + 0*\frac{7}{20} - 1500*\frac{3}{20} = 750 \\
     \end{gather*}
-    Por lo tanto, su ganancia esperada es de \$750. \\
     
     \item El tiempo que tardan en atender a un individuo en una cafetería es una variable aleatoria con la densidad de probabilidad: \\
     \begin{align*}
@@ -481,7 +495,6 @@
     P(\Omega) = \int \limits_{0}^\infty (\frac{1}{4}(e^{-\frac{x}{4}})) dx = -e^{-\frac{x}{4}} \bigg\vert_{0}^{b} = \lim \limits_{b \rightarrow \infty} -e^{-\frac{b}{4}} - (-e^{0}) = 1 \\
     \mu = \int \limits_{0}^\infty (\frac{1}{4}x(e^{-\frac{x}{4}})) dx = \frac{1}{4}(e^{-\frac{x}{4}})(-4x-16) \bigg\vert_{0}^b = \lim \limits_{b \rightarrow \infty} -e^{-\frac{b}{4}}(-4b -16) - (-e^{0})(-16) = 4 \\
     \end{gather*}
-    Por lo tanto el valor esperado es 4. \\
     
     \item El número de horas de operación satisfactoria que proporciona un televisor Sonny es una variable aleatoria de z cuya función de probabilidad es: \\
     \begin{align*}
@@ -499,6 +512,5 @@
     \mu = \int \limits_{0}^{\infty} (0.0001ze^{-0.0001z}) dz = \frac{e{-\frac{x}{10 000}}(-10 000x - 100 000 000)}{10 000} \bigg\vert_{0}^b \\
     = \lim \limits_{b \rightarrow \infty} \frac{e{-\frac{b}{10 000}}(-10 000b - 100 000 000)}{10 000} - \frac{e{-\frac{0}{10 000}}(-10 000(0) - 100 000 000)}{10 000} = 10 000
     \end{gather*}
-    Por lo tanto, el valor esperado es 10 000.
     
 \end{enumerate}

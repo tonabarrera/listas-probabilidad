@@ -1,3 +1,4 @@
+% !TeX spellcheck = es_ES
 \section{Lista 2}
 \begin{enumerate}
 	\item Se sabe que 10\% de los vasos producidos por cierta máquina tienen algún defecto. Si se seleccionan 10 vasos por ésta máquina, ¿cuál es la probabilidad de que ninguno este defectuoso?, ¿cuántos se esperaría encontrar defectuosos?
@@ -7,7 +8,7 @@
 		n = 10 \\
 		p = 0.1 \\
 		q = 0.9 \\
-		P(x = 0) = \binom{n}{x}p^xq^{n-x} = \binom{10}{0}(0.1)^0(0.9)^{10-0} = 0.3486784401 \textit{ o 34.86\%.} \\
+		P(x = 0) = \binom{n}{x}p^xq^{n-x} = \binom{10}{0}(0.1)^0(0.9)^{10-0} = 0.3486784401 \text{ o 34.86\%.} \\
 	\end{gather*}
 	\begin{gather*}
 		\mu = np = (10)(0.1) = 1
@@ -137,7 +138,150 @@
     \lambda = np = \frac{2}{5}\\
     P(x=0) = \frac{{\lambda}^{x}{e}^{-\lambda}}{x!}=\frac{(0.4)^{0}(e)^{-0.4}}{0!}= 0.670320046 \text{ ó } 67.03\%\\
     \end{gather*}
-    \setcounter{enumi}{23}
+    
+    \item Se ha determinado que el número de camiones que llegan cada hora un almacén tiene la distribución que se muestra en la tabla. Calcule el numero esperado de llegadas por hora y la varianza de esta distribución.
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline 
+        Número de Camiones & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\ 
+        \hline 
+        Probabilidad & 0.05 & 0.10 & 0.15 & 0.25 & 0.30 & 0.10 & 0.05 \\ 
+        \hline 
+    \end{tabular}
+    \end{center}
+    \textbf{Solución}\\
+    La variable es discreta\\
+    a)
+    \begin{gather*}
+    P(\Omega) = 1\\
+    P(\Omega) = \Sigma f(x) = 0.05 + 0.10 + 0.5 + 0.25 +0.30 + 0.10 + 0.05 = 1\\
+    \mu = \Sigma xf(x)\\
+    \mu = 0(0.05) + 1(0.10) + 2(0.5) + 3(0.25) + 4(0.30) + 5(0.10) + 6(0.05)\\
+    \mu = 3.15	
+    \end{gather*}
+    b)
+    \begin{gather*}
+    \sigma^2 = E[(x - \mu)^2] = E[x^2] - \mu ^2\\
+    \sigma^2 = 0^2(0.05) + 1^2(0.10) + 2^2(0.5) + 3^2(0.25) + 4^2(0.30) + 5^2(0.10) + 6^2(0.05) - (3.15)^2\\
+    \sigma^2 = 12.03 - 9.9225\\
+    \sigma^2 = 2.1275
+    \end{gather*}
+    \item En la siguiente tabla se identifica la probabilidad de que el sistema de computación se caiga el número señalado por periodos por semana, durante la fase inicial de instalación del sistema. Calcule el número esperado de veces por semana que la computadora no está trabajando y la varianza de esta distribución.
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline 
+        Número de Periodos  & 4 & 5 & 6 & 7 & 8 & 9 \\ 
+        \hline 
+        Probabilidad & 0.01 & 0.08 & 0.29 & 0.42 & 0.14 & 0.06 \\ 
+        \hline 
+    \end{tabular}
+    \end{center}
+    \textbf{Solución}\\
+    La variable es discreta\\
+    i)
+    \begin{gather*}
+    P(\Omega) = 1\\
+    P(\Omega) = \Sigma f(x) = 0.01 + 0.08 + 0.29 + 0.42 + 0.14 + 0.06 = 1\\
+    \mu = \Sigma xf(x)\\
+    \mu = 4(0.01) + 5(0.08) + 6(0.29) + 7(0.42) + 8(0.14) + 9(0.06)\\
+    \mu = 6.78	
+    \end{gather*}\\
+    ii)
+    \begin{gather*}
+    \sigma^2 = E[(x - \mu)^2] = E[x^2] - \mu ^2\\
+    \sigma^2 = 4^2(0.01) + 5^2(0.08) + 6^2(0.29) + 7^2(0.42) + 8^2(0.14) + 9^2(0.06) - (6.78)^2
+    \sigma^2 = 47 - (6.78)^2
+    \sigma^2 = 1.0376
+    \end{gather*}\\
+    
+    \item Obtenga el valor esperado de la siguiente función\\
+    \begin{gather*}
+    f(x)= \left\{ \begin{array}{lcc}
+    \frac{1}{8}(x - 1) & 2 \leq x \leq 4 \\\\
+    \\0  & otro \\
+    \end{array}
+    \right.
+    \end{gather*}\\
+    \textbf{Solución}\\
+    La variable es continua\\
+    \begin{center}
+        %P(\Omega) = \frac{1}{8}(\frac{x^2}{2} - x)\right.|_2^4\\
+        \begin{gather*}
+        P(\Omega) = 1\\
+        P(\Omega) = \int_{-\infty}^{\infty} f(x)dx = \int_{-\infty}^{2} f(x)dx + \int_{2}^{4} f(x)dx + \int_{4}^{\infty} f(x)dx\\
+        P(\Omega) = 0 + \int_{2}^{4}\frac{1}{8}(x - 1) dx + 0\\
+        P(\Omega) = \frac{37}{12}\\
+        P(\Omega) = 3.0833\\
+        \end{gather*}\\
+    \end{center}
+    \item Si $x$ es una variable aleatoria binomial, ¿Para qué valor de $p$ es la probabilidad binomial un máximo?\\
+    \textbf{Solución}\\
+    La variable es binomial\\
+    \begin{gather*}
+    f(x) = {n \choose x}p^xq^{n-x}\\
+    f'(x) =  {n \choose x}\dot[-(n-x)p^x(1-p)^{n-x-1} + xp^{x-1}(1 - p)^{n-x}]\\
+    \end{gather*}
+    Se iguala a cero para obtener el Máximo
+    \begin{gather*}
+    \displaystyle\cancel{{n \choose x}}[-(n-x)p^x(1 - p)^{n-x-1} + xp^{x-1}(1 - p)^{n-x}] = 0\\
+    xp^{x-1}(1 - p)^{n-x} = (n-x)p^x(1 - p)^{n-x-1}\\
+    x(1 - p) = (n - x)p\\
+    x - \cancel{xp} = np - \cancel{xp}\\
+    p = \frac{x}{n}
+    \end{gather*}\\
+    \item Demuestre que la media y la varianza de la distribución binomial son:\\
+    $$ \mu = np\hspace{2cm} \sigma^2 = npq$$\\\\\\\\\\\\
+    \textbf{Solución}\\
+    Sea $x$ una variable aleatoria binomial\\
+    i)
+    \begin{proof}
+    \begin{align*}
+    \mu &= E[x] = \displaystyle\sum_{k=0}^N xf(x) = \displaystyle\sum_{k=0}^N x{n \choose x}p^xq^{n-x}\\
+    &=  \displaystyle\sum_{k=0}^N x\frac{n!}{(n-x)!x!}p^xq^{n-x}\\
+    &= \displaystyle\sum_{k=0}^N \frac{\cancel{x}n(n-1)!}{(n-x)!\cancel{x}(x-1)!}pp^{x-1}q^{n-x}\\
+    &= np\displaystyle\sum_{k=0}^N \frac{(n-1)!}{(n-x)!(x-1)!}p^{x-1}q^{n-x}\\
+    &= np\displaystyle\sum_{k=0}^N {n-1 \choose x - 1}p^{x-1}q^{n-x}\\
+    &= np(1)\\
+    &= np
+    \end{align*}
+    \end{proof}
+    ii)
+    \begin{gather*}
+    \sigma^2 = E[x^2] - \mu^2 = *E[x^2] - (np)^2\\
+    *E[x^2] = E[x^2 + 0] = E[x^2 +x -x] = E[x^2 - x]+ E[x] = **E[x^2 - x]+ np\\
+    **E[x^2 - x] = E[x(x-1)] = \displaystyle\sum_{k=0}^N x(x-1){n \choose x}p^xq^{n-x}\\
+    **E[x^2 - x] = \displaystyle\sum_{k=2}^N x(x-1){n \choose x}p^xq^{n-x}\\
+    **E[x^2 - x] = \displaystyle\sum_{k=2}^N\frac{x(x-1)!n!}{(n-x)!x!}p^xq^{n-x}\\
+    **E[x^2 - x] = \displaystyle\sum_{k=2}^N\frac{\cancel{x}\cancel{(x-1)}n(n-1)(n-2)!}{(n-x)!\cancel{x}\cancel{(x-1)}(x-2)!}p^2p^{x-2}q^{n-x}\\
+    **E[x^2 - x] = n(n-1)p^2 \displaystyle\sum_{k=2}^N \frac{(n-2)!}{(n-x)!(x-2)!}p^{x-2}q^{n-x}\\
+    m = n -2\\
+    y = x-2\\
+    = n(n-1)p^2\displaystyle\sum_{y=0}^m \frac{m!}{(m-y)!y!}p^yq^{m-y}\\
+    = n(n-1)p^2(1)\\
+    = n(n-1)p^2\\
+    -> E[x^2] = n(n-1)p^2 + np\\\\
+    \sigma^2 = n(n-1)p^2 +np -(np)^2\\
+    \sigma^2 = \cancel{n^2p^2} - np^2 +np - \cancel{n^2p^2}\\
+    \sigma^2 = np(1-p)\\
+    \sigma^2 = npq
+    \end{gather*}\\
+    
+    \item Demuestre que la media de la distribución geométrica está dada por:
+    $$ \mu = \frac{1}{p}$$\\
+    Solución\\
+    Sea x una variable aleatoria geométrica
+    \begin{proof}
+        \begin{align*}
+        \mu &= \displaystyle\sum_{x=0}^n xf(x)\\
+        &= \displaystyle\sum_{x=0}^n xpq^{x-1} = p \displaystyle\sum_{x=0}^n xq^{x-1}\\
+        &= p \displaystyle\sum_{x=0}^n \frac{d}{dx}[q^x] = p \frac{d}{dx}[\displaystyle\sum_{x=0}^n q^x]\\
+        \tag{$\displaystyle\sum_{x=0}^n q^x = \frac{1}{1-q}$}
+        &= p\frac{d}{dx}[\frac{1}{1-q}]\\
+        &= p[\frac{1}{(1-q)^2}]= \cancel{p}(\frac{1}{p^{\cancel{2}}})\\
+        &= \frac{1}{p}
+        \end{align*}
+    \end{proof}
+     
     \item Supóngase que la cantidad real de café instantáneo colocada por una máquina llenadora en frascos de "6 onzas" es ua variable aleatoria que tiene distribución normal con varianza $0.0025$ de onza. Si sólo el $3\%$ de los frascos va a contener menos de 6 onzas de café, ¿cuál debe ser el contenido medio de estos frascos?\\
     \textbf{Solución}\\
     \textbf{La variable es de distribución normal.}
@@ -154,7 +298,7 @@
         \end{gather*}
     \end{enumerate}
     
-    \item Si el $23\%$ de todos los pacientes con presión sanguínea elevada tienen efectos colaterales nocivos por la ingestión de cierto medicamento, utilie la aproximación normal para obtener la probabilidad de que entre 120 de estos pacientes tratados con este medicamento unas 32 presentarán efectos colaterales nocivos
+    \item Si el $23\%$ de todos los pacientes con presión sanguínea elevada tienen efectos colaterales nocivos por la ingestión de cierto medicamento, utilice la aproximación normal para obtener la probabilidad de que entre 120 de estos pacientes tratados con este medicamento unas 32 presentarán efectos colaterales nocivos
     
     \textbf{Solución}\\
     \textbf{La variable es de distribución normal.}
@@ -179,7 +323,7 @@
     \end{enumerate}
     
     
-    \item Se ha ajustado el proceso de fabricación de un tornillo de precisión de manera que la longitud promedio de los tornillos sea de 13cm. Por supuesto no todos los tornillos tiene una longitud exacta de 13cm, debido a fuentes aleatorias de variabilidad. La desviación estaándar de la longitud de los tornillos de 0.1cm y se sabe que la distribución de las longitudes tiene una forma normal. Determine la probabilidad de que un tornillo elegindo al azar tenga una longitud de entre 13.0 y 13.2cm.
+    \item Se ha ajustado el proceso de fabricación de un tornillo de precisión de manera que la longitud promedio de los tornillos sea de 13cm. Por supuesto no todos los tornillos tiene una longitud exacta de 13cm, debido a fuentes aleatorias de variabilidad. La desviación estándar de la longitud de los tornillos de 0.1cm y se sabe que la distribución de las longitudes tiene una forma normal. Determine la probabilidad de que un tornillo elegindo al azar tenga una longitud de entre 13.0 y 13.2cm.
     
     \textbf{Solución}\\
     \textbf{La variable es de distribución normal.}
@@ -197,10 +341,10 @@
         \end{gather*}
     \end{enumerate}
     
-    \item El número promedio de solicitudes de servicio que se reciben en un departamento de reparación de maqunaria por cada turno de 8 horas es de 10. Deterine la probabilidad de que se reciban más de 15 solicitides en un turno de 8 horas elegido al azar.
+    \item El número promedio de solicitudes de servicio que se reciben en un departamento de reparación de maquinaria por cada turno de 8 horas es de 10. Determine la probabilidad de que se reciban más de 15 solicitudes en un turno de 8 horas elegido al azar.
     
     \textbf{Solución}\\
-    \textbf{La distribución es de Poisson.}
+    \textbf{La distribución es de Poisson}
     \begin{enumerate}
         
         \item Calcular la probabilidad $P( x >15)$ \\
@@ -213,7 +357,7 @@
         \end{gather*}
     \end{enumerate}
     
-    \item Un embarque de 10 máquinas incluye una defectuosa. Si se eligen 7 máquinas al azar de ese embarque, ¿cuál es la probabilidad de que ningua de las 7 esté defectuosa?
+    \item Un embarque de 10 máquinas incluye una defectuosa. Si se eligen 7 máquinas al azar de ese embarque, ¿cuál es la probabilidad de que ninguna de las 7 esté defectuosa?
     
     \textbf{Solución}\\
     \textbf{La distribución es hipergeométrica}
@@ -241,7 +385,7 @@
         \end{gather*}
     \end{enumerate}
     
-    \item Un promedio de 0.5 clientes por minuto llega a una caja de salida en un almacén, ¿cuál es la probabilidad d eque lleguen 5 o más clientes en un intervalo dado de 5 minutos.
+    \item Un promedio de 0.5 clientes por minuto llega a una caja de salida en un almacén, ¿Cuál es la probabilidad de que lleguen 5 o más clientes en un intervalo dado de 5 minutos.
     \textbf{Solución}\\
     \textbf{La distribución es de Poisson}
     \begin{enumerate}
@@ -252,27 +396,21 @@
         = \sum_{x=0}^{3}\frac{(2.5)^{x}e^{-2.5}}{x!}=0.1088219811\text{ ó } 10.88\%\\
         \end{gather*}
     \end{enumerate}
-    \item Un promedio de 0.5 clientes por minuto llega a una caja de salida en un almacen. ¿Cuál es la probabilidad de que lleguen más de 20 clientes a la caja en un intervalo especifico de media hora? \\
+    \item Un promedio de 0.5 clientes por minuto llega a una caja de salida en un almacén ¿Cuál es la probabilidad de que lleguen más de 20 clientes a la caja en un intervalo especifico de media hora? \\
     
-    \textit{Solución: } \\
+    \textbf{Solución} \\
     X es una variable con distribución exponencial. \\
-    Datos: \\
-    - $ P = 0.5 x min $ \\
-    - $ n = \frac{1}{2}hora = 30 min. $ \\
-    - $\lambda = np = (0.5)(30) = 15 $\\
-    - $ x > 20 $ \\
-    $$ f(x) = \lambda e^{-\lambda x} = 15e^{-15x}$$
-    
-    $$ \mu = \int_{20}^{\infty} xf(x) = \lim_{b \to \infty} \int_{20}^{b} x15e^{-15x}dx = \lim_{b \to \infty} x(-e^{-15x}) \rvert_{20}^{b} - \int_{20}^{b} -e^{-15x}dx 
-    $$
-    
-    $$ \mu = \lim_{b \to \infty} \left( - \frac{x}{e^{15x}} - \frac{1}{15e^{15x}}  \right)  \rvert_{20}^{b}
-    $$
-    
-    $$ \mu = \lim_{n \to \infty} \left(  -\frac{b}{e^{15b}} - \frac{1}{15e^{15b}} + \frac{20}{e^{(15)(20)}} + \frac{1}{e^{(15)(20)}}  \right) = 20 + \frac{1}{15} = 20.067
-    $$
-    
-    Entonces, 
+    \begin{gather*}
+    P = 0.5 x min  \\
+    n = \frac{1}{2}hora = 30 min.  \\
+    \lambda = np = (0.5)(30) = 15 \\
+    x > 20  \\
+     f(x) = \lambda e^{-\lambda x} = 15e^{-15x}\\
+     \mu = \int_{20}^{\infty} xf(x) = \lim_{b \to \infty} \int_{20}^{b} x15e^{-15x}dx = \lim_{b \to \infty} x(-e^{-15x}) \rvert_{20}^{b} - \int_{20}^{b} -e^{-15x}dx  \\
+     \mu = \lim_{b \to \infty} \left( - \frac{x}{e^{15x}} - \frac{1}{15e^{15x}}  \right)  \rvert_{20}^{b}\\
+     \mu = \lim_{n \to \infty} \left(  -\frac{b}{e^{15b}} - \frac{1}{15e^{15b}} + \frac{20}{e^{(15)(20)}} + \frac{1}{e^{(15)(20)}}  \right) = 20 + \frac{1}{15} = 20.067
+    \end{gather*}
+    Entonces 
     \begin{center}
         $ P(x,t = \frac{1}{2}) = \int_{0}^{\frac{1}{2}} \frac{301}{15}e^{-\frac{301}{15}} = 0.999 $ ó $99.9\% $
     \end{center}
