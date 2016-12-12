@@ -1,0 +1,166 @@
+%La segunda parte: problemas 8-14, que son los problemas 8-14 de la lista 1, y el problema 37 del jefe, que es el problema 11 de la lista 2 :v
+
+%Para los problemas de 8-14 de la lista 1:
+\begin{enumerate}
+	\setcounter{enumi}{7} % Para que empiece en 8
+	\item El departamento de investigación de una fábrica de focos ha perfeccionado un recubrimiento para los filamentos capaz de prolongar la duración de aquellos. Para comparar las duraciones de los focos nuevos con la de los focos viejos, se seleccionan 10 focos fabricados con el nuevo procedimiento y 10 normales, y se forman parejas: un foco viejo con uno nuevo. Se somete los 10 pares a prueba, y se anota cuál de los focos de cada par falla primero, si el foco nuevo o el viejo. Suponiendo que el nuevo proceso realmente no prolonga la duración de los focos, ¿cuál es la probabilidad de que el foco viejo falle primero en por lo menos 9 de los 10 pares?
+	\\\textbf{Solución}
+	\\\text{La variable es binomial.} \\
+	\begin{gather*}
+        P(F_v) = \binom{10}{9} \cdot \frac{1}{2}^9 \cdot \frac{1}{2}^1 + \binom{10}{10} \cdot \frac{1}{2}^{10} \cdot \frac{1}{2}^0 \\
+        = \frac{11}{1024} = 1.07\%
+	\end{gather*}
+	
+	\item Demuestre que:
+    \begin{enumerate}
+        \item $P(A^C \cap B) = P(B) - P(A \cap B)$
+    	\\\textbf{Demostración}
+        \begin{gather*}
+            P(A^C \cap B) = P(B \cap A^C) = P((B \cap A^C) \cup \diameter) \\
+            = P((B \cap A^C) \cup (B \cap B^C)) = P(B \cap (A^C \cup B^C)) \\
+            = P(B \cap (A \cap B)^C) = P(B \backslash (A \cap B)^C) \\
+            = P(B) - P(A \cap B)
+    	\end{gather*}
+
+        \item Si $A \subseteq B$, entonces $P(B^C) \leq P(A^C)$
+    	\\\textbf{Demostración}
+        \begin{gather*}
+            A \subseteq B \\
+            P(A) \leq P(B) \\
+            1 - P(A^C) \leq 1 - P(B^C) \\
+            - P(A^C) \leq - P(B^C) \\
+            P(B^C) \leq P(A^C)
+    	\end{gather*}
+
+        \item $P(A \cup B \cup C) = P(A \cup (B \backslash (A \cap B)) \cup (C \backslash (A \cap C)))$
+    	\\\textbf{Demostración}
+        \begin{gather*}
+            P(A \cup (B \backslash (A \cap B)) \cup (C \backslash (A \cap C))) \\
+            = P(A \cup (B \cap (A \cap B)^C) \cup (C \cap (A \cap C))^C) \\
+            = P(A \cup (B \cap (A^C \cup B^C)) \cup (C \cap (A^C \cup C^C))) \\
+            = P(A \cup ((B \cap A^C) \cup (B \cap B^C)) \cup ((C \cap A^C) \cup (C \cap C^C))) \\
+            = P((A \cup (B \cap A^C) \cup (C\cap A^C)) = P(((A \cup B) \cap (A \cup A^C)) \cup C \cap A^C)) \\
+            = P((A \cup B) \cup (C \cap A^C)) = P((A \cup B \cup C) \cap (A \cup B \cup A^C)) \\
+            = P(A \cup B \cup C)
+    	\end{gather*}
+
+        \item $P(A \cap B^C) = P(A) - P(A \cap B)$
+    	\\\textbf{Demostración}
+        \begin{gather*}
+            P(A \cap B^C) = P((A \cap B^C) \cup \diameter) \\
+            = P((A \cap B^C) \cup (A \cap A^C)) = P(A \cap (B^C \cup A^C)) \\
+            = P(A \cap (B \cap A)^C) = P(A \backslash (B \cap A)) \\
+            = P(A) - P(B \cap A) = P(A) - P(A \cap B)
+    	\end{gather*}
+    \end{enumerate}
+	
+	\item Dado un experimento en el que $P(A) = \frac{1}{2}, P(B) = \frac{1}{3}, P(A \cap B) = \frac{1}{4}$, calcular:
+    \begin{enumerate}
+        \item $P(A^C \cap B^C)$
+    	\\\textbf{Solución}
+        \begin{gather*}
+            P(A^C \cap B^C) = P(A^C) + P(B^C) - P(A^C \cup B^C) \\
+            = 1 - P(A) + 1 - P(B) - P((A \cap B)^C) = 2 - P(A) - P(B-) - 1 + P(A \cap B) \\
+            = 1 - \frac{1}{2} - \frac{1}{3} + \frac{1}{4} = \frac{5}{12}
+    	\end{gather*}
+
+        \item $P(A^C \cup B^C)$
+    	\\\textbf{Solución}
+        \begin{gather*}
+            P(A^C \cup B^C) = P((A \cap B)^C) \\
+            = 1 - P(A \cap B) \\
+            = 1 - \frac{1}{4} = \frac{3}{4}
+    	\end{gather*}
+
+        \item $P(A^C \cap B)$
+    	\\\textbf{Solución}
+        \begin{gather*}
+            P(A^C \cap B) = P(B) - P(A \cap B) \\
+            = \frac{1}{3} - \frac{1}{4} = \frac{1}{12}
+    	\end{gather*}
+
+    \end{enumerate}
+	
+	\item Demuestre por inducción  ue: $$P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) \leq \sum_{i=1}^{n} P(E_i)$$
+	\\\textbf{Demostración}
+    \begin{enumerate}
+        \item Probemos para $n=1$:
+        \begin{gather*}
+            P(E_1) \leq \sum_{i=1}^{1} P(E_i) = P(E_1)
+    	\end{gather*}
+
+        \item Supongamos que $P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) \leq \sum_{i=1}^{n} P(E_i)$ y probemos que $P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n \cup E_{n + 1}) \leq \sum_{i=1}^{n + 1} P(E_i)$:
+        Sabemos que
+        \begin{gather*}
+            \sum_{i=1}^{n + 1} P(E_i) = \sum_{i=1}^{n} P(E_i) + P(E_{n + 1})
+        \end{gather*}
+        Así
+        \begin{gather*}
+            P(E_{n + 1}) = \sum_{i=1}^{n + 1} P(E_i) - \sum_{i=1}^{n} P(E_i)
+        \end{gather*}
+        Luego
+        \begin{gather*}
+            P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n \cup E_{n + 1}) \\
+            = P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) + P(E_{n + 1}) - P((E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) \cap E_{n + 1}) \\
+            = P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) + \sum_{i=1}^{n + 1} P(E_i) - \sum_{i=1}^{n} P(E_i) \\
+            - P((E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) \cap E_{n + 1}) \\
+            \leq P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) + \sum_{i=1}^{n + 1} P(E_i) - P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) \\
+            - P((E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) \cap E_{n + 1}) \\
+            = \sum_{i=1}^{n + 1} P(E_i) - P((E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) \cap E_{n + 1})
+    	\end{gather*}
+        Entonces
+        \begin{gather*}
+            P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n \cup E_{n + 1}) \leq \sum_{i=1}^{n + 1} P(E_i) - P((E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) \cap E_{n + 1}) \\
+            \leq \sum_{i=1}^{n + 1} P(E_i)
+        \end{gather*}
+    \end{enumerate}
+    Por lo tanto
+    \begin{gather*}
+        P(E_1 \cup E_2 \cup E_3 \cup \ldots \cup E_n) \leq \sum_{i=1}^{n} P(E_i)
+    \end{gather*}
+	
+	\item Se lanzan 3 dados. Si  ninguna pareja muestra la misma cara, ¿cuál es la probabilidad de que haya un uno?
+	\\\textbf{Solución}
+	\begin{gather*}
+        P(No-Rep) = \frac{6}{6} \cdot \frac{5}{6} \cdot \frac{4}{6} = \frac{120}{216} \\
+        P(1,X,X) = \frac{1}{6} \cdot \frac{5}{6} \cdot \frac{4}{6} = \frac{20}{216} \\
+        P(2,1,X) = \frac{1}{6} \cdot \frac{1}{6} \cdot \frac{4}{6} = \frac{4}{216} \\
+        P(3,1,X) = \frac{1}{6} \cdot \frac{1}{6} \cdot \frac{4}{6} = \frac{4}{216} \\
+        \ldots P(2-6,1,X) = \frac{20}{216}
+        P(2,3,1) = \frac{1}{6} \cdot \frac{1}{6} \cdot \frac{1}{6} = \frac{1}{216} \\
+        P(2,4,1) = \frac{1}{6} \cdot \frac{1}{6} \cdot \frac{1}{6} = \frac{1}{216} \\
+        \ldots P(2-6,2-6,X,No-Rep) = 5 \cdot P(2-6,2-6,1) = \frac{20}{216} \\
+        P(1 \cap No-Rep) = P(1,X,X) + P(2-6,1,X) + P(2-6,2-6,X,No-Rep) = \frac{60}{216} \\
+        P(1 | No-Rep) = \frac{P(1 \cap No-Rep)}{P(No-Rep)} = \frac{60}{120} = 50\%
+	\end{gather*}
+
+    \item En una fábrica de pernos, las máquinas A, B C producen, respectivamente, el 25, 35 y 40 por ciento del total. En esta producción, el 5, 4 y 2 por ciento son pernos defectuosos. Se toma al azar un perno de la producción total y se le encuentra defectuoso. ¿Cuál es la probabilidad de que haya sido producido por B?
+	\\\textbf{Solución}
+	\begin{gather*}
+        P(Def) = 0.25 \cdot 0.05 + 0.35 \cdot 0.04 + 0.40 \cdot 0.02 = \frac{69}{2000} \\
+        P(B \cap Def) = 0.35 \cdot 0.04 = \frac{28}{2000} \\
+        P(B | Def) = \frac{P(B \cap Def)}{P(Def)} = \frac{28}{69} = 40.57\%
+	\end{gather*}
+
+    \item En una escuela, 1\% del estuciantado participa en un programa atlético intercolegial; de este grupo, 10\% tiene promedio de 7 o más, en tanto que el 20\% del resto del estudiantado tienen promedio de 7 o más. ¿Qué proporción total del estudiantado tiene un nivel de 7 o más? Si se selecciona 1 estudiante al azar de entre el estudiantado y se ve que tiene un nivel de 7.13, ¿cuál es la probabilidad de que participe en el programa atlético intercolegial?
+	\\\textbf{Solución}
+	\begin{gather*}
+        P(7^+) = \frac{P(pic \cap 7^+) + p(no-pic \cap 7^+)}{P(\Omega)} = \frac{\frac{10}{100} \cdot \frac{1}{100} + \frac{20}{100} \cdot \frac{99}{100}}{1} = \frac{1990}{10000} = 19.9\% \\
+        P(pic | 7^+) = \frac{P(pic \cap 7^+)}{P(7^+)} = \frac{\frac{1}{10} \cdot \frac{10}{100}}{\frac{1990}{10000}} = \frac{10}{1990} = 0.502\%
+	\end{gather*}
+\end{enumerate}
+
+
+
+
+
+%Para el problema 11 de la lista 2:
+\begin{enumerate}
+	\setcounter{enumi}{10} % Para que empiece en 11
+    \item Un psicólogo asevera que sólo el 50\%de todos los alumnos del último semestre de vocacional, capaces de desempeñar trabajos a nivel superior, asisten en realidad al nivel superior. Suponiendo verdadera esta afirmación, obtenga las probabilidades de que, entre 18 alumnos capaces de desempeñar trabajos a nivel superior, exactamente 10 asistan a ESCOM.
+	\\\textbf{Solución}
+    \\ No se puede resolver, pues no se puede saber cuántos de los que están en superior, están en ESCOM.
+\end{enumerate}
+
+
+

@@ -1,0 +1,825 @@
+%% LyX 2.2.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[latin9]{inputenc}
+\usepackage{amstext}
+\usepackage{graphicx}
+\usepackage{wasysym}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\newcommand{\noun}[1]{\textsc{#1}}
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+Añorve Pons German Silvestre
+
+Instituto Politécnico Nacional
+
+Escuela Superior de Cómputo
+
+2CM4
+
+Teoría Computacional
+
+Pasar de Automatas a Expresiones Regulares
+
+\section{Automata 126}
+%
+Con k=0
+
+\begin{tabular}{|c|c|}
+\hline 
+$R_{ij}^{k}$ & Simbolos\tabularnewline
+\hline 
+\hline 
+$R_{11}^{0}$ & $\epsilon$+0\tabularnewline
+\hline 
+$R_{12}^{0}$ & 1\tabularnewline
+\hline 
+$R_{13}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{14}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{21}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{22}^{0}$ & $\epsilon$\tabularnewline
+\hline 
+$R_{23}^{0}$ & 1\tabularnewline
+\hline 
+$R_{24}^{0}$ & 1\tabularnewline
+\hline 
+$R_{31}^{0}$ & 1\tabularnewline
+\hline 
+$R_{32}^{0}$ & 1\tabularnewline
+\hline 
+$R_{33}^{0}$ & $\epsilon$\tabularnewline
+\hline 
+$R_{34}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{41}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{42}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{43}^{0}$ & 1\tabularnewline
+\hline 
+$R_{44}^{0}$ & $\epsilon$+0\tabularnewline
+\hline 
+\end{tabular}
+
+Con k=1
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ & Sustitución de valores & Simplificación\tabularnewline
+\hline 
+\hline 
+$R_{11}^{1}$ & $(\epsilon+0)+(\epsilon+0)(\epsilon+0)*(\epsilon+0)$ & $(\epsilon+0)*$\tabularnewline
+\hline 
+$R_{12}^{1}$ & $1+(\epsilon+0)(\epsilon+0)*1$ & $1+(\epsilon+0)*1$\tabularnewline
+\hline 
+$R_{13}^{1}$ & $\phi+(\epsilon+0)(\epsilon+0)*\phi$ & $\phi$\tabularnewline
+\hline 
+$R_{14}^{1}$ & $\phi+(\epsilon+0)(\epsilon+0)*\phi$ & $\phi$\tabularnewline
+\hline 
+$R_{21}^{1}$ & $\phi+(\epsilon+0)(\epsilon+0)*\phi$ & $\phi$\tabularnewline
+\hline 
+$R_{22}^{1}$ & $\epsilon+$$\phi$ & $\epsilon$\tabularnewline
+\hline 
+$R_{23}^{1}$ & $1+\phi$ & 1\tabularnewline
+\hline 
+$R_{24}^{1}$ & $1+\phi$ & 1\tabularnewline
+\hline 
+$R_{31}^{1}$ & $1+1(\epsilon+0)*(\epsilon+0)$ & 1+10{*}\tabularnewline
+\hline 
+$R_{32}^{1}$ & $1+1(\epsilon+0)*1$ & 1+10{*}1\tabularnewline
+\hline 
+$R_{33}^{1}$ & $\epsilon+\phi$ & $\epsilon$\tabularnewline
+\hline 
+$R_{34}^{1}$ & $\phi+\phi$ & $\phi$\tabularnewline
+\hline 
+$R_{41}^{1}$ & $\phi+\phi$ & $\phi$\tabularnewline
+\hline 
+$R_{42}^{1}$ & $\phi+\phi$ & $\phi$\tabularnewline
+\hline 
+$R_{43}^{1}$ & 1$+\phi$ & 1\tabularnewline
+\hline 
+$R_{44}^{1}$ & $\epsilon+0+\phi$ & $\epsilon+0$\tabularnewline
+\hline 
+\end{tabular}
+
+Con K=2
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ & Sustitución de valores & Simplificación\tabularnewline
+\hline 
+\hline 
+$R_{11}^{2}$ & $0+(0*1)(\epsilon)*\phi$ & 0\tabularnewline
+\hline 
+$R_{12}^{2}$ & $(0*1)+0*1(\epsilon)*\epsilon$ & 0{*}1\tabularnewline
+\hline 
+$R_{13}^{2}$ & $\phi+(0*1)(\epsilon)*1$ & 0{*}11\tabularnewline
+\hline 
+$R_{14}^{2}$ & $\phi+(0*1)(\epsilon)*1$ & 0{*}11\tabularnewline
+\hline 
+$R_{21}^{2}$ & $\phi+\phi$ & $\phi$\tabularnewline
+\hline 
+$R_{22}^{2}$ & $\epsilon+\epsilon$ & $\epsilon$\tabularnewline
+\hline 
+$R_{23}^{2}$ & $1+\epsilon(\epsilon)*1$ & 1\tabularnewline
+\hline 
+$R_{24}^{2}$ & $1+\epsilon(\epsilon)*1$ & 1\tabularnewline
+\hline 
+$R_{31}^{2}$ & $(1+10*)+(1+10*)(\epsilon)*(\phi)$ & 1+10{*}\tabularnewline
+\hline 
+$R_{32}^{2}$ & $(1+10*1)+(1+10*1)(\epsilon)*\epsilon$ & 1+10{*}1\tabularnewline
+\hline 
+$R_{33}^{2}$ & $\epsilon+(1+10*1)(\epsilon)*1$ & 11+10{*}11\tabularnewline
+\hline 
+$R_{34}^{2}$ & $\phi+(1+10*1)(\epsilon)*1$ & 11+10{*}11\tabularnewline
+\hline 
+$R_{41}^{2}$ & $\phi+\phi$ & $\phi$\tabularnewline
+\hline 
+$R_{42}^{2}$ & $\phi+\phi$ & $\phi$\tabularnewline
+\hline 
+$R_{43}^{2}$ & $1+\phi$ & $1$\tabularnewline
+\hline 
+$R_{44}^{2}$ & $\epsilon+0$ & $\epsilon+0$\tabularnewline
+\hline 
+\end{tabular}
+
+Con k=3
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ & Sustitución de valores & Simplificación\tabularnewline
+\hline 
+$R_{11}^{3}$ & $0+(0*11)(11+10*11)*(1+10*)$ & 0+(0{*}111){*}0{*}+(0{*}11111){*}0{*}\tabularnewline
+\hline 
+\hline 
+$R_{12}^{3}$ & $(0*1)+(0*11)(11+10*11)*(1+10*1)$ & (0{*}1{*}){*}\tabularnewline
+\hline 
+$R_{13}^{3}$ & $0*11+(0*11)(11+10*11)*(1+10*11)$ & 0{*}(11){*}+0{*}1110{*}11\tabularnewline
+\hline 
+$R_{14}^{3}$ & (0{*}11)+$(0*11)(11+10*11)*(1+10*11)$ & 0{*}(11){*}+0{*}1110{*}11\tabularnewline
+\hline 
+$R_{21}^{3}$ & $\phi+1(11+10*11)*(1+10*)$ & (11){*}0{*}+1(10{*}11){*}10\tabularnewline
+\hline 
+$R_{22}^{3}$ & $\epsilon+1(11+10*11)*(1+10*1)$ & (11){*}0{*}(11){*}\tabularnewline
+\hline 
+$R_{23}^{3}$ & 1+$1(11+10*11)*(1+10*11)$ & 1+1(11){*}+1(11){*}10{*}\tabularnewline
+\hline 
+$R_{24}^{3}$ & 1+$1(11+10*11)*(1+10*11)$ & 1+10{*}11\tabularnewline
+\hline 
+$R_{31}^{3}$ & $(1+10*)+(11+10*11)(11+10*11)*(1+10*)$ & 1+(10{*}11)10\tabularnewline
+\hline 
+$R_{32}^{3}$ & $(1+10*1)+(11+10*11)(11+10*11)*(1+10*1)$ & (10{*}11){*}10{*}1\tabularnewline
+\hline 
+$R_{33}^{3}$ & $(1+10*11)+(11+10*11)(11+10*11)*(1+10*11)$ & (10{*}1){*}10{*}11\tabularnewline
+\hline 
+$R_{34}^{3}$ & $(1+10*11)+(11+10*11)(11+10*11)*(1+10*11)$ & 10{*}1(11){*}+10{*}1(10{*}11){*}\tabularnewline
+\hline 
+$R_{41}^{3}$ & $\phi+1(11+10*11)*(1+10*)$ & 1(10{*}11){*}10{*}\tabularnewline
+\hline 
+$R_{42}^{3}$ & $\phi+1(11+10*11)*(1+10*1)$ & 1(10{*}11){*}10{*}1\tabularnewline
+\hline 
+$R_{43}^{3}$ & 1+$1(11+10*11)*(1+10*11)$ & 1+1(11){*}+1(10{*}11){*}\tabularnewline
+\hline 
+$R_{44}^{3}$ & $\epsilon+1(11+10*11)*(1+10*11)$ & $\epsilon+0+1(11)*+1(10*11)*$\tabularnewline
+\hline 
+\end{tabular}
+
+Con K=4
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ & Sustitución & Simplificación\tabularnewline
+\hline 
+\hline 
+$R_{11}^{4}$ & $0+(0*11)(11+10*11)*(1+10*)+$((0{*}11)+$(0*11)(11+10*11)*(1+10*11)$)$(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*))$ & $0+(0*11)(11+10*11)*(1+10*)+$((0{*}11)+$(0*11)(11+10*11)*(1+10*11)$)$(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*))$\tabularnewline
+\hline 
+$R_{12}^{4}$ & $(0*1)+(0*11)(11+10*11)*(1+10*1)+$((0{*}11)+$(0*11)(11+10*11)*(1+10*11)$)$(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*1))$ & $(0*1)+(0*11)(11+10*11)*(1+10*1)+$((0{*}11)+$(0*11)(11+10*11)*(1+10*11)$)$(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*1))$\tabularnewline
+\hline 
+$R_{13}^{4}$ & $0*11+(0*11)(11+10*11)*(1+10*11)$((0{*}11)+$(0*11)(11+10*11)*(1+10*11)$)$(0*11)+(0*11)(11+10*11)*(1+10*11)*(1+1(11+10*11)*(1+10*11))$ & $0*11+(0*11)(11+10*11)*(1+10*11)$((0{*}11)+$(0*11)(11+10*11)*(1+10*11)$)$(0*11)+(0*11)(11+10*11)*(1+10*11)*(1+1(11+10*11)*(1+10*11))$\tabularnewline
+\hline 
+$R_{14}^{4}$ & $(0*11)+(0*11)(11+10*11)*(1+10*11)+$((0{*}11)+$(0*11)(11+10*11)*(1+10*11)$)$(0*11)+(0*11)(11+10*11)*(1+10*11)*(\epsilon+1(11+10*11)*(1+10*11))$ & $(0*11)+(0*11)(11+10*11)*(1+10*11)+$((0{*}11)+$(0*11)(11+10*11)*(1+10*11)$)$(0*11)+(0*11)(11+10*11)*(1+10*11)*(\epsilon+1(11+10*11)*(1+10*11))$\tabularnewline
+\hline 
+$R_{21}^{4}$ & $\phi+1(11+10*11)*(1+10*)+$(1+$1(11+10*11)*(1+10*11)$)$(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*))$ & $\phi+1(11+10*11)*(1+10*)+$(1+$1(11+10*11)*(1+10*11)$)$(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*))$\tabularnewline
+\hline 
+$R_{22}^{4}$ & $\epsilon+1(11+10*11)*(1+10*1)$(1+$1(11+10*11)*(1+10*11)$)$(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*1))$ & $\epsilon+1(11+10*11)*(1+10*1)$(1+$1(11+10*11)*(1+10*11)$)$(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*1))$\tabularnewline
+\hline 
+$R_{23}^{4}$ & $(1+1(11+10*11)*(1+10*11))+(1+1(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(1+1(11+10*11)*(1+10*11))$ & $(1+1(11+10*11)*(1+10*11))+(1+1(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(1+1(11+10*11)*(1+10*11))$\tabularnewline
+\hline 
+$R_{24}^{4}$ & $(1+1(11+10*11)*(1+10*11))+(1+1(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(\epsilon+1(11+10*11)*(1+10*11))$ & $(1+1(11+10*11)*(1+10*11))+(1+1(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(\epsilon+1(11+10*11)*(1+10*11))$\tabularnewline
+\hline 
+$R_{31}^{4}$ & $((1+10*)+(11+10*11)(11+10*11)*(1+10*))+((1+10*11)+(11+10*11)(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*))$ & $((1+10*)+(11+10*11)(11+10*11)*(1+10*))+((1+10*11)+(11+10*11)(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*))$\tabularnewline
+\hline 
+$R_{32}^{4}$ & $((1+10*1)+(11+10*11)(11+10*11)*(1+10*1))+((1+10*11)+(11+10*11)(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*1))$ & $((1+10*1)+(11+10*11)(11+10*11)*(1+10*1))+((1+10*11)+(11+10*11)(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*1))$\tabularnewline
+\hline 
+$R_{33}^{4}$ & $((1+10*11)+(11+10*11)(11+10*11)*(1+10*11))+((1+10*11)+(11+10*11)(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(1+1(11+10*11)*(1+10*11))$ & $((1+10*11)+(11+10*11)(11+10*11)*(1+10*11))+((1+10*11)+(11+10*11)(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(1+1(11+10*11)*(1+10*11))$\tabularnewline
+\hline 
+$R_{34}^{4}$ & $((1+10*11)+(11+10*11)(11+10*11)*(1+10*11))+((1+10*11)+(11+10*11)(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(\epsilon+1(11+10*11)*(1+10*11))$ & $((1+10*11)+(11+10*11)(11+10*11)*(1+10*11))+((1+10*11)+(11+10*11)(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(\epsilon+1(11+10*11)*(1+10*11))$\tabularnewline
+\hline 
+$R_{41}^{4}$ & $(\phi+1(11+10*11)*(1+10*))+(\epsilon+1(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*))$ & $(\phi+1(11+10*11)*(1+10*))+(\epsilon+1(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*))$\tabularnewline
+\hline 
+$R_{42}^{4}$ & $(\phi+1(11+10*11)*(1+10*1))+(\epsilon+1(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*1))$ & $(\phi+1(11+10*11)*(1+10*1))+(\epsilon+1(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(\phi+1(11+10*11)*(1+10*1))$\tabularnewline
+\hline 
+$R_{43}^{4}$ & $(1+1(11+10*11)*(1+10*11))+(\epsilon+1(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(1+1(11+10*11)*(1+10*11))$ & $(1+1(11+10*11)*(1+10*11))+(\epsilon+1(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(1+1(11+10*11)*(1+10*11))$\tabularnewline
+\hline 
+$R_{44}^{4}$ & $(\epsilon+1(11+10*11)*(1+10*11))+(\epsilon+1(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(\epsilon+1(11+10*11)*(1+10*11))$ & $(\epsilon+1(11+10*11)*(1+10*11))+(\epsilon+1(11+10*11)*(1+10*11))(0*11)+(0*11)(11+10*11)*(1+10*11)*(\epsilon+1(11+10*11)*(1+10*11))$\tabularnewline
+\hline 
+\end{tabular}
+
+\subsection*{Automata 110}
+
+%\includegraphics[scale=0.6]{\string"automata 110\string".eps}
+
+K=0
+
+\begin{tabular}{|c|c|}
+\hline 
+$R_{ij}^{k}$ & $ $\tabularnewline
+\hline 
+\hline 
+$R_{11}^{0}$ & $\varepsilon+0$\tabularnewline
+\hline 
+$R_{12}^{0}$ & $\varepsilon+1$\tabularnewline
+\hline 
+$R_{13}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{14}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{21}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{22}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{23}^{0}$ & $\varepsilon+1$\tabularnewline
+\hline 
+$R_{24}^{0}$ & $\varepsilon+1$\tabularnewline
+\hline 
+$R_{31}^{0}$ & $\varepsilon+0$\tabularnewline
+\hline 
+$R_{32}^{0}$ & $\varepsilon+1$\tabularnewline
+\hline 
+$R_{33}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{34}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{41}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{42}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{43}^{0}$ & $\varepsilon+1$\tabularnewline
+\hline 
+$R_{44}^{0}$ & $\varepsilon+0$\tabularnewline
+\hline 
+\end{tabular}
+
+K=1
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ &  & \tabularnewline
+\hline 
+\hline 
+$R_{11}^{1}$ & $(\varepsilon+0)+(\varepsilon+1)(\phi)*(\phi)$ & $0$\tabularnewline
+\hline 
+$R_{12}^{1}$ & $(\varepsilon+1)+(\varepsilon+1)(\text{\ensuremath{\phi}})*(\phi)$ & $1$\tabularnewline
+\hline 
+$R_{13}^{1}$ & $(\text{\ensuremath{\phi}})+(\varepsilon+1)(\phi)*(\varepsilon+0)$ & $\phi$\tabularnewline
+\hline 
+$R_{14}^{1}$ & $(\phi)+(\varepsilon+1)(\text{\ensuremath{\phi}})*(\varepsilon+1)$ & $\phi$\tabularnewline
+\hline 
+$R_{21}^{1}$ & $\phi+(\phi)(\text{\ensuremath{\phi}})*(\phi)$ & $\phi$\tabularnewline
+\hline 
+$R_{22}^{1}$ & $\phi+(\phi)(\phi)*(\phi)$ & $\text{\ensuremath{\phi}}+(\phi)(\phi)*(\phi)$\tabularnewline
+\hline 
+$R_{23}^{1}$ & $\phi+(\varepsilon+1)\phi*(\epsilon+1)$ & $\phi$\tabularnewline
+\hline 
+$R_{24}^{1}$ & $\phi+(\varepsilon+1)\phi*(\epsilon+1)$ & $\phi$\tabularnewline
+\hline 
+$R_{31}^{1}$ & $(\varepsilon+0)+(\varepsilon+1)(\text{\ensuremath{\oslash}})*(\text{\ensuremath{\oslash}})$ & $\epsilon+0$\tabularnewline
+\hline 
+$R_{32}^{1}$ & $(\varepsilon+1)+(\varepsilon+1)(\text{\ensuremath{\phi}})*(\phi)$ & $(\epsilon+1)$\tabularnewline
+\hline 
+$R_{33}^{1}$ & $(\text{\ensuremath{\phi}})+(\varepsilon+1)(\phi)*(\varepsilon+1)$ & $\phi$\tabularnewline
+\hline 
+$R_{34}^{1}$ & $(\text{\ensuremath{\phi}})+(\varepsilon+1)(\phi)*(\varepsilon+1)$ & $\phi$\tabularnewline
+\hline 
+$R_{41}^{1}$ & $\phi+(\phi)(\phi)*\phi$ & $\phi$\tabularnewline
+\hline 
+$R_{42}^{1}$ & $\phi+(\phi)(\phi)*\phi$ & $\phi$\tabularnewline
+\hline 
+$R_{43}^{1}$ & $(\varepsilon+1)+(\phi)(\phi)*(\varepsilon+1)$ & $(\epsilon+1)$\tabularnewline
+\hline 
+$R_{44}^{1}$ & $(\varepsilon+0)+(\phi)(\phi)*(\varepsilon+1)$ & $(\epsilon+0)$\tabularnewline
+\hline 
+\end{tabular}
+
+K=2
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ & Sustitución & Simplificado\tabularnewline
+\hline 
+\hline 
+$R_{11}^{2}$ & $(\varepsilon+0)+()()*(\varepsilon+0)$ & 0\tabularnewline
+\hline 
+$R_{12}^{2}$ & $(\varepsilon+1)+()()*(\varepsilon+1)$ & 1\tabularnewline
+\hline 
+$R_{13}^{2}$ & $\phi+(\phi)(\phi)*(\phi)$ & $\phi$\tabularnewline
+\hline 
+$R_{14}^{2}$ & $\phi+(\phi)(\phi)*(\phi)$ & $\phi$\tabularnewline
+\hline 
+$R_{21}^{2}$ & $\phi+(\varepsilon+1)(\phi)*(0)$ & $\phi$\tabularnewline
+\hline 
+$R_{22}^{2}$ & $\phi+(\varepsilon+1)(\phi)*(\varepsilon+1)$ & $\phi$\tabularnewline
+\hline 
+$R_{23}^{2}$ & $(\varepsilon+1)+(\varepsilon+1)(\phi)*(\phi)$ & 1\tabularnewline
+\hline 
+$R_{24}^{2}$ & $(\varepsilon+1)+(\varepsilon+1)(\phi)*(\phi)$ & 1\tabularnewline
+\hline 
+$R_{31}^{2}$ & $(\varepsilon+0)+(\phi)(\phi)*(\varepsilon+0)$ & 0\tabularnewline
+\hline 
+$R_{32}^{2}$ & $(\varepsilon+1)+(\phi)(\phi)*(\varepsilon+1)$ & 1\tabularnewline
+\hline 
+$R_{33}^{2}$ & $\phi+(\phi)(\phi)*(\phi)$ & $\phi$\tabularnewline
+\hline 
+$R_{34}^{2}$ & $\phi+(\phi)(\phi)*(\phi)$ & $\phi$\tabularnewline
+\hline 
+$R_{41}^{2}$ & $\phi+(\varepsilon+1)(\phi)*(\varepsilon+0)$ & $\phi$\tabularnewline
+\hline 
+$R_{42}^{2}$ & $+(\varepsilon+1)(\phi)*(\varepsilon+1)$ & $\phi$\tabularnewline
+\hline 
+$R_{43}^{2}$ & $(\varepsilon+1)+(\varepsilon+1)(\phi)*(\phi)$ & 1\tabularnewline
+\hline 
+$R_{44}^{2}$ & $(\varepsilon+0)+(\varepsilon+1)(\phi)*(\phi)$ & 0\tabularnewline
+\hline 
+\end{tabular}
+
+K=3
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ & Sustitución & Simplificado\tabularnewline
+\hline 
+\hline 
+$R_{11}^{3}$ & $(\varepsilon+0)+(\phi)(\phi)*(\varepsilon+0)$ & 0\tabularnewline
+\hline 
+$R_{12}^{3}$ & $(\varepsilon+1)+(\phi)(\phi)*(\varepsilon+1)$ & 1\tabularnewline
+\hline 
+$R_{13}^{3}$ & $\phi+(\phi)(\phi)*(\phi)$ & $\phi$\tabularnewline
+\hline 
+$R_{14}^{3}$ & $\phi+(\phi)(\phi)*(\phi)$ & $\phi$\tabularnewline
+\hline 
+$R_{21}^{3}$ & $\phi+(\varepsilon+1)()*(0)$ & $\phi$\tabularnewline
+\hline 
+$R_{22}^{3}$ & $\phi+(\varepsilon+1)(\phi)*(\varepsilon+1)$ & $\phi$\tabularnewline
+\hline 
+$R_{23}^{3}$ & $(\varepsilon+1)+(\varepsilon+1)(\phi)*(\phi)$ & 1 + 10{*}1\tabularnewline
+\hline 
+$R_{24}^{3}$ & $(\varepsilon+1)+(\varepsilon+1)(\phi)*(\phi)$ & 1+10{*}\tabularnewline
+\hline 
+$R_{31}^{3}$ & $(\varepsilon+0)+(\phi)(\phi)*(\varepsilon+0)$ & 0\tabularnewline
+\hline 
+$R_{32}^{3}$ & $(\varepsilon+1)+(\phi)(\phi)*(\varepsilon+1)$ & 1\tabularnewline
+\hline 
+$R_{33}^{3}$ & $\phi+(\phi)(\phi)*(\phi)$ & $\phi$\tabularnewline
+\hline 
+$R_{34}^{3}$ & $\phi+(\phi)(\phi)*(\phi)$ & $\phi$\tabularnewline
+\hline 
+$R_{41}^{3}$ & $\phi+(\varepsilon+1)()*(\varepsilon+0)$ & $\phi$\tabularnewline
+\hline 
+$R_{42}^{3}$ & $\phi+(\varepsilon+1)(\phi)*(\varepsilon+1)$ & $\phi$\tabularnewline
+\hline 
+$R_{43}^{3}$ & $(\varepsilon+1)+(\varepsilon+1)(\phi)*(\phi)$ & 1 + 0{*}1\tabularnewline
+\hline 
+$R_{44}^{3}$ & $(\varepsilon+0)+(\varepsilon+1)(\phi)*(\phi)$ & 0{*}\tabularnewline
+\hline 
+\end{tabular}
+
+\section{\noun{Automata 90}}
+
+%\includegraphics[scale=0.6]{\string"automata 90\string".eps}
+
+\subsection*{$k=0$}
+
+\begin{tabular}{|c|c|}
+\hline 
+$R_{ij}^{k}$ & Simbolo\tabularnewline
+\hline 
+\hline 
+$R_{11}^{0}$ & $\mathbf{\epsilon+0}$\tabularnewline
+\hline 
+$R_{12}^{0}$ & $\mathbf{\diameter}$\tabularnewline
+\hline 
+$R_{13}^{0}$ & $1$\tabularnewline
+\hline 
+$R_{14}^{0}$ & $\diameter$\tabularnewline
+\hline 
+$R_{21}^{0}$ & $\diameter$\tabularnewline
+\hline 
+$R_{22}^{0}$ & $\epsilon+0$\tabularnewline
+\hline 
+$R_{23}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{24}^{0}$ & $1$\tabularnewline
+\hline 
+$R_{31}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{32}^{0}$ & $1$\tabularnewline
+\hline 
+$R_{33}^{0}$ & $\epsilon$\tabularnewline
+\hline 
+$R_{34}^{0}$ & $0$\tabularnewline
+\hline 
+$R_{41}^{0}$ & $1$\tabularnewline
+\hline 
+$R_{42}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{43}^{0}$ & $\epsilon$\tabularnewline
+\hline 
+$R_{44}^{0}$ & $0$\tabularnewline
+\hline 
+\end{tabular}
+
+\subsection*{$k=1$}
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ & Sustituir & Simplificado\tabularnewline
+\hline 
+\hline 
+$R_{11}^{1}$ & $\epsilon+0+(\epsilon+0)(\epsilon+0)^{*}(\epsilon+0)$ & $\mathbf{0^{*}}$\tabularnewline
+\hline 
+$R_{12}^{1}$ & $\diameter+(\epsilon+0)(\epsilon+0)^{*}\diameter$ & $\diameter$\tabularnewline
+\hline 
+$R_{13}^{1}$ & $1+(\epsilon+0)(\epsilon+0)^{*}1$ & $\mathbf{0^{*}1}$\tabularnewline
+\hline 
+$R_{14}^{1}$ & $\diameter+(\epsilon+0)(\epsilon+0)^{*}\diameter$ & $\mathbf{\diameter}$\tabularnewline
+\hline 
+$R_{21}^{1}$ & $\diameter+\diameter(\epsilon+0)^{*}(\epsilon+0)$ & $\mathbf{\diameter}$\tabularnewline
+\hline 
+$R_{22}^{1}$ & $\epsilon+0+\diameter(\epsilon+0)^{*}\diameter$ & $\epsilon+0$\tabularnewline
+\hline 
+$R_{23}^{1}$ & $\mathbf{\diameter+\diameter(\epsilon+0)^{*}1}$ & $\diameter$\tabularnewline
+\hline 
+$R_{24}^{1}$ & $\mathbf{1+\diameter(\epsilon+0)^{*}\diameter}$ & $1$\tabularnewline
+\hline 
+$R_{31}^{1}$ & $\mathbf{\diameter+\diameter(\epsilon+0)^{*}(\epsilon+0)}$ & $\mathbf{\diameter}$\tabularnewline
+\hline 
+$R_{32}^{1}$ & $1+\diameter(\epsilon+0)^{*}\diameter$ & $1$\tabularnewline
+\hline 
+$R_{33}^{1}$ & $\mathbf{\epsilon+\diameter(\epsilon+0)^{*}1}$ & $\mathbf{\epsilon}$\tabularnewline
+\hline 
+$R_{34}^{1}$ & $0+\diameter(\epsilon+0)^{*}\diameter$ & $0$\tabularnewline
+\hline 
+$R_{41}^{1}$ & $1+1(\epsilon+0)^{*}(\epsilon+0$ & $10*$\tabularnewline
+\hline 
+$R_{42}^{1}$ & $\diameter+1(\epsilon+0)^{*}\diameter$ & $\diameter$\tabularnewline
+\hline 
+$R_{43}^{1}$ & $\mathbf{0+1(\epsilon+0)^{*}1}$ & $0+10*1$\tabularnewline
+\hline 
+$R_{44}^{1}$ & $\epsilon+1(\epsilon+0)^{*}\diameter$ & $\epsilon$\tabularnewline
+\hline 
+\end{tabular}
+
+
+\subsection*{$k=2$}
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ & Sustitución & Simplificación\tabularnewline
+\hline 
+\hline 
+$R_{11}^{2}$ & $0^{*}+\diameter(\epsilon+0)^{*}\diameter$ & $0*$\tabularnewline
+\hline 
+$R_{12}^{2}$ & $\diameter+\diameter(\epsilon+0)^{*}(\epsilon+0)$ & $\diameter$\tabularnewline
+\hline 
+$R_{13}^{2}$ & $\mathbf{0^{*}1+\diameter(\epsilon+0)^{*}\diameter}$ & $\mathbf{0^{*}1}$\tabularnewline
+\hline 
+$R_{14}^{2}$ & $\mathbf{\diameter+\diameter(\epsilon+0)^{*}1}$ & $\mathbf{\diameter}$\tabularnewline
+\hline 
+$R_{21}^{2}$ & $\mathbf{\diameter+(\epsilon+0)(\epsilon+0)^{*}\diameter}$ & $\mathbf{\diameter}$\tabularnewline
+\hline 
+$R_{22}^{2}$ & $\epsilon+0+(\epsilon+0)(\epsilon+0)^{*}(\epsilon+0)$ & $0*$\tabularnewline
+\hline 
+$R_{23}^{2}$ & $\diameter+(\epsilon+0)(\epsilon+0)^{*}\diameter$ & $\diameter$\tabularnewline
+\hline 
+$R_{24}^{2}$ & $\mathbf{1+(\epsilon+0)(\epsilon+0)^{*}1}$ & $0*1$\tabularnewline
+\hline 
+$R_{31}^{2}$ & $\mathbf{\diameter+1(\epsilon+0)^{*}\diameter}$ & $\mathbf{\diameter}$\tabularnewline
+\hline 
+$R_{32}^{2}$ & $1+1(\epsilon+0)^{*}(\epsilon+0)$ & $10*$\tabularnewline
+\hline 
+$R_{33}^{2}$ & $\mathbf{\epsilon+1(\epsilon+0)^{*}\diameter}$ & $\mathbf{\epsilon}$\tabularnewline
+\hline 
+$R_{34}^{2}$ & $0+1(\epsilon+0)^{*}1$ & $0+10*1$\tabularnewline
+\hline 
+$R_{41}^{2}$ & $\mathbf{1+\diameter(\epsilon+0)^{*}\diameter}$ & $10*$\tabularnewline
+\hline 
+$R_{42}^{2}$ & $\diameter+\diameter(\epsilon+0)^{*}(\epsilon+0)$ & $\diameter$\tabularnewline
+\hline 
+$R_{43}^{2}$ & $0+\diameter(\epsilon+0)^{*}\diameter$ & $0+10*1$\tabularnewline
+\hline 
+$R_{44}^{2}$ & $\mathbf{\epsilon+\diameter(\epsilon+0)^{*}1}$ & $\mathbf{\epsilon}$\tabularnewline
+\hline 
+\end{tabular}
+
+\subsection*{$k=3$}
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ & Sustitución  & Simplificación\tabularnewline
+\hline 
+\hline 
+$R_{11}^{3}$ & $\mathbf{0^{*}+0^{*}1\epsilon^{*}\diameter}$ & $0*$\tabularnewline
+\hline 
+$R_{12}^{3}$ & $\diameter+0^{*}1\epsilon^{*}10^{*}$ & $+0^{*}110^{*}$\tabularnewline
+\hline 
+$R_{13}^{3}$ & $\mathbf{0^{*}1+0^{*}1\epsilon^{*}\epsilon}$ & $\mathbf{0^{*}1}$\tabularnewline
+\hline 
+$R_{14}^{3}$ & $\diameter+0^{*}1\epsilon^{*}(0+10^{*}1)$ & $0^{*}10+0^{*}110^{*}1$\tabularnewline
+\hline 
+$R_{21}^{3}$ & $\diameter+\diameter\epsilon^{*}\diameter$ & $\diameter$\tabularnewline
+\hline 
+$R_{22}^{3}$ & $0^{*}+\diameter\epsilon^{*}10^{*}$ & $0^{*}$\tabularnewline
+\hline 
+$R_{23}^{3}$ & $\diameter+\diameter\epsilon^{*}\epsilon$ & $\diameter$\tabularnewline
+\hline 
+$R_{24}^{3}$ & $0^{*}1+\diameter\epsilon^{*}(0+10^{*}1)$ & $0*1$\tabularnewline
+\hline 
+$R_{31}^{3}$ & $\mathbf{\diameter+\epsilon\epsilon^{*}\diameter}$ & $\mathbf{\diameter}$\tabularnewline
+\hline 
+$R_{32}^{3}$ & $10^{*}+\epsilon\epsilon^{*}10^{*}$ & $\mathbf{10^{*}}$\tabularnewline
+\hline 
+$R_{33}^{3}$ & $\mathbf{\epsilon+\epsilon\epsilon^{*}\epsilon}$ & $\mathbf{\epsilon}$\tabularnewline
+\hline 
+$R_{34}^{3}$ & $0+10^{*}1+\epsilon\epsilon^{*}(0+10^{*}1)$ & $0+10^{*}1$\tabularnewline
+\hline 
+$R_{41}^{3}$ & $10^{*}+(0+10^{*}1)\epsilon^{*}\diameter$ & $10*$\tabularnewline
+\hline 
+$R_{42}^{3}$ & $\diameter+(0+10^{*}1)\epsilon^{*}10^{*}$ & $010^{*}+10^{*}110^{*}$\tabularnewline
+\hline 
+$R_{43}^{3}$ & $0+10^{*}1+(0+10^{*}1)\epsilon^{*}\epsilon$ & $0+10^{*}1$\tabularnewline
+\hline 
+$R_{44}^{3}$ & $\epsilon+(0+10^{*}1)\epsilon^{*}(0+10^{*}1)$ & $\epsilon+(0+10^{*}1)(0+10^{*}1)$\tabularnewline
+\hline 
+\end{tabular}
+
+\subsection*{$k=4$}
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ & Sustitución & Simplificación\tabularnewline
+\hline 
+\hline 
+$R_{11}^{4}$ & $0^{*}+(0^{*}10+0^{*}110^{*}1)(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}10^{*}$ & $0^{*}+(0^{*}10+0^{*}110^{*}1)(0+10^{*}1)^{*}10^{*}$\tabularnewline
+\hline 
+$R_{12}^{4}$ & $0^{*}110^{*}+(0^{*}10+0^{*}110^{*}1)(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}(010^{*}+10^{*}110^{*})$ & $0^{*}110^{*}+(0^{*}10+0^{*}110^{*}1)(0+10^{*}1)^{*}(010^{*}+10^{*}110^{*})$\tabularnewline
+\hline 
+$R_{13}^{4}$ & $0^{*}1+(0^{*}10+0^{*}110^{*}1)(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}(0+10^{*}1)$ & $0^{*}1+(0^{*}10+0^{*}110^{*}1)(0+10^{*}1)^{*}(0+10^{*}1)$\tabularnewline
+\hline 
+$R_{14}^{4}$ & $0^{*}10+0^{*}110^{*}1+(0^{*}10+0^{*}110^{*}1)(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}(\epsilon+(0+10^{*}1)(0+10^{*}1))$ & $(0^{*}10+0^{*}110^{*}1)(0+10^{*}1)^{*}$\tabularnewline
+\hline 
+$R_{21}^{4}$ & $\mathbf{\diameter+0^{*}1(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}10^{*}}$ & $0^{*}1(0+10^{*}1)^{*}10^{*}$\tabularnewline
+\hline 
+$R_{22}^{4}$ & $0^{*}+0^{*}1(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}(010^{*}+10^{*}110^{*})$ & $0^{*}+0^{*}1(0+10^{*}1)^{*}(010^{*}+10^{*}110^{*})$\tabularnewline
+\hline 
+$R_{23}^{4}$ & $\diameter+0^{*}1(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}(0+10^{*}1)$ & $0^{*}1(0+10^{*}1)^{*}(0+10^{*}1)$\tabularnewline
+\hline 
+$R_{24}^{4}$ & $0^{*}1+0^{*}1(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}(\epsilon+(0+10^{*}1)(0+10^{*}1))$ & $0^{*}1(0+10^{*}1)^{*}$\tabularnewline
+\hline 
+$R_{31}^{4}$ & $\diameter+(0+10^{*}1)(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}10^{*}$ & $(0+10^{*}1)(0+10^{*}1)^{*}10^{*}$\tabularnewline
+\hline 
+$R_{32}^{4}$ & $10^{*}+(0+10^{*}1)(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}(010^{*}+10^{*}110^{*})$ & $10^{*}+(0+10^{*}1)(0+10^{*}1)^{*}(010^{*}+10^{*}110^{*})$\tabularnewline
+\hline 
+$R_{33}^{4}$ & $\epsilon+(0+10^{*}1)(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}(0+10^{*}1)$ & $\epsilon+(0+10^{*}1)(0+10^{*}1)^{*}(0+10^{*}1)$\tabularnewline
+\hline 
+$R_{34}^{4}$ & $0+10^{*}1+(0+10^{*}1)(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}(\epsilon+(0+10^{*}1)(0+10^{*}1))$ & $(0+10^{*}1)(0+10^{*}1)^{*}$\tabularnewline
+\hline 
+$R_{41}^{4}$ & $10^{*}+(\epsilon+(0+10^{*}1)(0+10^{*}1))(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}10^{*}$ & $(0+10^{*}1)^{*}10^{*}$\tabularnewline
+\hline 
+$R_{42}^{4}$ & $010^{*}+10^{*}110^{*}+(\epsilon+(0+10^{*}1)(0+10^{*}1))(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}(010^{*}+10^{*}110^{*})$ & $(0+10^{*}1)^{*}(010^{*}+10^{*}110^{*})$\tabularnewline
+\hline 
+$R_{43}^{4}$ & $0+10^{*}1+(\epsilon+(0+10^{*}1)(0+10^{*}1))(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}(0+10^{*}1)$ & $(0+10^{*}1)^{*}(0+10^{*}1)$\tabularnewline
+\hline 
+$R_{44}^{4}$ & $\mathbf{\epsilon+(0+10^{*}1)(0+10^{*}1)+(\epsilon+(0+10^{*}1)(0+10^{*}1))(\epsilon+(0+10^{*}1)(0+10^{*}1))^{*}}\mathbf{(\epsilon+(0+10^{*}1)(0+10^{*}1))}$ & $(0+10^{*}1)^{*}$\tabularnewline
+\hline 
+\end{tabular}
+
+\section{Automata 73}
+
+%\includegraphics[scale=0.6]{\string"automata 73\string".eps}
+
+\subsection*{$k=0$}
+
+\begin{tabular}{|c|c|}
+\hline 
+$R_{ij}^{k}$ & Simbolos\tabularnewline
+\hline 
+\hline 
+$R_{11}^{0}$ & $1+\epsilon$\tabularnewline
+\hline 
+$R_{12}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{13}^{0}$ & $0$\tabularnewline
+\hline 
+$R_{14}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{21}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{22}^{0}$ & $0+\epsilon$\tabularnewline
+\hline 
+$R_{23}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{24}^{0}$ & $1$\tabularnewline
+\hline 
+$R_{31}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{32}^{0}$ & $1$\tabularnewline
+\hline 
+$R_{33}^{0}$ & $\epsilon$\tabularnewline
+\hline 
+$R_{34}^{0}$ & $0$\tabularnewline
+\hline 
+$R_{41}^{0}$ & $0$\tabularnewline
+\hline 
+$R_{42}^{0}$ & $\phi$\tabularnewline
+\hline 
+$R_{43}^{0}$ & $0$\tabularnewline
+\hline 
+$R_{44}^{0}$ & $\epsilon$\tabularnewline
+\hline 
+\end{tabular}
+
+\subsection*{$k=1$}
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ &  & \tabularnewline
+\hline 
+\hline 
+$R_{11}^{1}$ & $(1+\epsilon)+(1+\epsilon)(1+\epsilon)^{*}(1+\epsilon)$ & $1*$\tabularnewline
+\hline 
+$R_{12}^{1}$ & $\diameter+(1+\epsilon)(1+\epsilon)^{*}\diameter)$ & $\diameter$\tabularnewline
+\hline 
+$R_{13}^{1}$ & $0+(1+\epsilon)(1+\epsilon)^{*}0$ & $1*0$\tabularnewline
+\hline 
+$R_{14}^{1}$ & $\diameter+(1+\epsilon)(1+\epsilon)^{*}\diameter$ & $\diameter$\tabularnewline
+\hline 
+$R_{21}^{1}$ & $\diameter+\diameter$ & $\diameter$\tabularnewline
+\hline 
+$R_{22}^{1}$ & $0+\epsilon+\diameter$ & $0+\epsilon$\tabularnewline
+\hline 
+$R_{23}^{1}$ & $\diameter+\diameter$ & $\diameter$\tabularnewline
+\hline 
+$R_{24}^{1}$ & $\diameter+1$ & $1$\tabularnewline
+\hline 
+$R_{31}^{1}$ & $\diameter+\diameter$ & $\diameter$\tabularnewline
+\hline 
+$R_{32}^{1}$ & $\diameter+1$ & $1$\tabularnewline
+\hline 
+$R_{33}^{1}$ & $\varepsilon+\diameter$ & $\varepsilon$\tabularnewline
+\hline 
+$R_{34}^{1}$ & $\diameter+0$ & $0$\tabularnewline
+\hline 
+$R_{41}^{1}$ & $0+0(1+\epsilon)^{*}(1+\epsilon)$ & $01^{*}$\tabularnewline
+\hline 
+$R_{42}^{1}$ & $\diameter+0(1+\epsilon)^{*}\diameter$ & $\diameter$\tabularnewline
+\hline 
+$R_{43}^{1}$ & $0+0(1+\epsilon)^{*}0$ & $=\mathbf{0+01^{*}0}$\tabularnewline
+\hline 
+$R_{44}^{1}$ & $\epsilon+0(1+\epsilon)^{*}\diameter$ & $\epsilon$\tabularnewline
+\hline 
+\end{tabular}
+
+\subsection*{$k=2$}
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ &  & \tabularnewline
+\hline 
+\hline 
+$R_{11}^{2}$ & $1^{*}+\diameter$ & $1*$\tabularnewline
+\hline 
+$R_{12}^{2}$ & $\diameter$ & $\diameter$\tabularnewline
+\hline 
+$R_{13}^{2}$ & $1^{*}0+\diameter$ & $1*0$\tabularnewline
+\hline 
+$R_{14}^{2}$ & $\diameter+\diameter$ & $\diameter$\tabularnewline
+\hline 
+$R_{21}^{2}$ & $\diameter+(0+\epsilon)(0+\epsilon)^{*}\diameter$ & $\mathbf{\diameter}$\tabularnewline
+\hline 
+$R_{22}^{2}$ & $(0+\epsilon)+(0+\epsilon)(0+\epsilon)^{*}(0+\epsilon)$ & $0*$\tabularnewline
+\hline 
+$R_{23}^{2}$ & $\diameter+(0+\epsilon)(0+\epsilon)^{*}\diameter$ & $\diameter$\tabularnewline
+\hline 
+$R_{24}^{2}$ & $1+(0+\epsilon)(0+\epsilon)^{*}1$ & $ $\tabularnewline
+\hline 
+$R_{31}^{2}$ & $\diameter+1(0+\epsilon)^{*}\diameter$ & $\diameter$\tabularnewline
+\hline 
+$R_{32}^{2}$ & $1+1(0+\epsilon)^{*}(0+\epsilon)$ & $10*$\tabularnewline
+\hline 
+$R_{33}^{2}$ & $\epsilon+1(0+\epsilon)^{*}\diameter$ & $\epsilon$\tabularnewline
+\hline 
+$R_{34}^{2}$ & $0+1(0+\epsilon)^{*}1$ & $0+10^{*}1$\tabularnewline
+\hline 
+$R_{41}^{2}$ & $01^{*}+\diameter$ & $01*$\tabularnewline
+\hline 
+$R_{42}^{2}$ & $\phi$ & $\phi$\tabularnewline
+\hline 
+$R_{43}^{2}$ & $0+01^{*}0$ & $0+01^{*}0$\tabularnewline
+\hline 
+$R_{44}^{2}$ & $\epsilon$ & $\epsilon$\tabularnewline
+\hline 
+\end{tabular}
+
+\subsection*{$k=3$}
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ & Sustituido & Simplificado\tabularnewline
+\hline 
+\hline 
+$R_{11}^{3}$ & $1^{*}+\diameter$ & $1*$\tabularnewline
+\hline 
+$R_{12}^{3}$ & $\diameter+1^{*}0(\epsilon)^{*}10^{*}$ & $\diameter+1^{*}010^{*}$\tabularnewline
+\hline 
+$R_{13}^{3}$ & $1^{*}0+1^{*}0\epsilon\epsilon$ & $1^{*}0$\tabularnewline
+\hline 
+$R_{14}^{3}$ & $\diameter+1^{*}0\epsilon(0+10^{*}1)$ & $1^{*}010^{*}$\tabularnewline
+\hline 
+$R_{21}^{3}$ & $\diameter+\diameter$ & $\diameter$\tabularnewline
+\hline 
+$R_{22}^{3}$ & $\mathbf{0^{*}}$ & $\mathbf{0^{*}}$\tabularnewline
+\hline 
+$R_{23}^{3}$ & $\mathbf{\diameter}$ & $\mathbf{\diameter}$\tabularnewline
+\hline 
+$R_{24}^{3}$ & $\mathbf{0^{*}1}$ & $\mathbf{0^{*}1}$\tabularnewline
+\hline 
+$R_{31}^{3}$ & $\mathbf{\diameter+\epsilon\epsilon\diameter}$ & $\mathbf{\diameter}$\tabularnewline
+\hline 
+$R_{32}^{3}$ & $10^{*}+10^{*}$ & $10^{*}$\tabularnewline
+\hline 
+$R_{33}^{3}$ & $\mathbf{\epsilon}$ & $\mathbf{\epsilon}$\tabularnewline
+\hline 
+$R_{34}^{3}$ & $0+10^{*}1$ & $0+10^{*}1$\tabularnewline
+\hline 
+$R_{41}^{3}$ & $10^{*}+(0+10^{*}1)\epsilon^{*}\diameter$ & $10*$\tabularnewline
+\hline 
+$R_{42}^{3}$ & $\diameter+(0+01^{*}0)(10^{*})$ & $010^{*}+01^{*}010^{*}$\tabularnewline
+\hline 
+$R_{43}^{3}$ & $0+01^{*}0$ & $0+01^{*}0$\tabularnewline
+\hline 
+$R_{44}^{3}$ & $\epsilon+(0+01^{*}0)(0+10^{*}1)$ & $\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1$\tabularnewline
+\hline 
+\end{tabular}
+
+\subsection*{$k=4$}
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$R_{ij}^{k}$ & Sustituido & Simplificado\tabularnewline
+\hline 
+\hline 
+$R_{11}^{4}$ & $0^{*}+(1^{*}+(1^{*}00+1^{*}010^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}01^{*}$ & $0^{*}+(1^{*}+(1^{*}00+1^{*}010^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}01^{*}$\tabularnewline
+\hline 
+$R_{12}^{4}$ & $1^{*}010^{*}+(1^{*}00+1^{*}010^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(010*+01^{*}010^{*})$ & $1^{*}010^{*}+(1^{*}00+1^{*}010^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(010*+01^{*}010^{*})$\tabularnewline
+\hline 
+$R_{13}^{4}$ & $1^{*}0+(1^{*}00+1^{*}010^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(0+01^{*}0)$ & $1^{*}0+(1^{*}00+1^{*}010^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(0+01^{*}0)$\tabularnewline
+\hline 
+$R_{14}^{4}$ & $1^{*}00+1^{*}010^{*}1+(1^{*}00+1^{*}010^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)$ & $(1^{*}00+1^{*}010^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}$\tabularnewline
+\hline 
+$R_{21}^{4}$ & $\diameter+0^{*}1(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}01^{*}$ & $0^{*}1(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}01^{*}$\tabularnewline
+\hline 
+$R_{22}^{4}$ & $0^{*}+0^{*}1(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(010*+01^{*}010^{*})$ & $0^{*}+0^{*}1(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(010*+01^{*}010^{*})$\tabularnewline
+\hline 
+$R_{23}^{4}$ & $\diameter+0^{*}1(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(0+01^{*}0)$ & $0^{*}1(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(0+01^{*}0)$\tabularnewline
+\hline 
+$R_{24}^{4}$ & $0^{*}1+0^{*}1(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)$ & $0^{*}1+0^{*}1(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)$\tabularnewline
+\hline 
+$R_{31}^{4}$ & $\diameter+(0+10^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}01^{*}$ & $(0+10^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}01^{*}$\tabularnewline
+\hline 
+$R_{32}^{4}$ & $10^{*}+(0+10^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(010*+01^{*}010^{*})$ & $10^{*}+(0+10^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(010*+01^{*}010^{*})$\tabularnewline
+\hline 
+$R_{33}^{4}$ & $\epsilon+(0+10^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(0+01^{*}0)$ & $\epsilon+(0+10^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(0+01^{*}0)$\tabularnewline
+\hline 
+$R_{34}^{4}$ & $(0+10^{*}1)+(0+10^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)$ & $(0+10^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}$\tabularnewline
+\hline 
+$R_{41}^{4}$ & $\mathbf{(01^{*})+(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(01^{*})}$ & $(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(01^{*})$\tabularnewline
+\hline 
+$R_{42}^{4}$ & $(010^{*}+01^{*}010^{*})+(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(010^{*}+01^{*}010^{*})$ & $(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(010^{*}+01^{*}010^{*})$\tabularnewline
+\hline 
+$R_{43}^{4}$ & $(0+01^{*}0)+(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(0+01^{*}0)$ & $(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(0+01^{*}0)$\tabularnewline
+\hline 
+$R_{44}^{4}$ & $(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)+(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)$ & $(\epsilon+00+010^{*}1+01^{*}00+01^{*}010^{*}1)^{*}$\tabularnewline
+\hline 
+\end{tabular}
+\end{document}

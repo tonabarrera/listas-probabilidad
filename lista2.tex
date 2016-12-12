@@ -87,7 +87,7 @@
     \\\textbf{Solución}
     \\\text{La variable es de Poisson}
     \begin{gather*}
-    \lambda = np = 1 \text{ (cada 20 min)}\\
+    \lambda = np = 1 \tag{ cada 20 min}\\
     x>2\\
     p(x>2) =\sum _{x=3}^{\infty }\frac{{\lambda}^{x}{e}^{-\lambda}}{x!}=\sum _{x=3}^{\infty }\frac{{1}^{x}{e}^{-1}}{x!}=1 - \sum _{x=0}^{2}\frac{{1}^{x}{e}^{-1}}{x!} = 1- \left( \frac{{e}^{-1}}{0!}+\frac{{e}^{-1}}{1!}+\frac{{e}^{-1}}{2!} \right) \\
     = 0.08030139707 \text{ ó } 8.03\%
@@ -96,7 +96,19 @@
     \\\textbf{Solución}
     \\\text{La variable es de Poisson}
     \begin{gather*}
-    \lambda = 1 \text{ (cada 2 meses)}\\
+    \lambda = 1 \tag{ cada 2 meses}\\
     \lambda = \frac{(1 \text{ accidentes})(12 \text{ meses})}{2 \text{ meses}} = 6 \text{ accidentes}\\
     \end{gather*}
+    \item En Chilpancingo, la incompatibilidad se da como la razón o motivo legal en el 70\% de todos los casos de divorcio. Obtenga la probabilidad de que 5 de los 6 siguientes divorcios archivados de esta ciudad argumentan incompatibilidad como motivo principal.
+    \\\textbf{Solución}
+    \\La variable es binomial
+    \begin{gather*}    
+    n = 6\\
+    p = 0.70 \\
+    q = 0.30 \\
+    P(5) = \binom{6}{5}(0.7)^5(0.3)^1 = 0.302526 \text{ ó }  30.35\%
+    \end{gather*}
+    \item Un psicólogo asevera que sólo el 50\%de todos los alumnos del último semestre de vocacional, capaces de desempeñar trabajos a nivel superior, asisten en realidad al nivel superior. Suponiendo verdadera esta afirmación, obtenga las probabilidades de que, entre 18 alumnos capaces de desempeñar trabajos a nivel superior, exactamente 10 asistan a ESCOM.
+    \\\textbf{Solución}
+    \\ No se puede resolver, pues no se puede saber cuántos de los que están en superior, están en ESCOM.
 \end{enumerate}

@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+
+\usepackage[english]{babel}   
+\usepackage[utf8]{inputenc} %Todos los caracteres admitidos
+\usepackage{verbatim}
+\usepackage{listings}
+
+\usepackage[letterpaper,vmargin=2.3cm,hmargin=2cm,nohead]{geometry}
+
+
+\begin{document} 
+
+\date{}
+
+\title{PROBABILIDAD Y ESTADÍSTICA \\ LISTA DE EJERCICIOS}
+\author{}
+\maketitle
+
+\section{Elementos de Probabilidad | Variables aleatorias}
+
+\section{Variables aleatorias | Distribuciones especiales}
+
+
+\newpage
+
+\section{Distribuciones especiales | Estadística paramétrica}
+
+\paragraph{Ejercicio 1}
+Las siguientes son las puntuaciones de una prueba de IQ obtenidas por una muestra aleatoria de 18 estudiantes de ESCOM: 
+\begin{center} 130, \ 122, \ 119, \ 142, \ 136, \ 127, \ 120, \ 152, \ 141, \\
+132, \ 127, \ 118, \ 150, \ 141, \ 133, \ 137, \ 129, \ 142
+\end{center}
+Determine un intervalo de confianza del 93\% para la puntuación promedio de todos los estudiantes de ESCOM. \\
+
+\textit{Solución: }
+
+$$ \overline{x} = \sum xf(x)= (118)\left( \frac{1}{18} \right) + (119)\left( \frac{1}{18} \right) + (120)\left( \frac{1}{18} \right) + (122)\left( \frac{1}{18} \right) + (127)\left( \frac{2}{18} \right) +  (129)\left( \frac{1}{18} \right) + $$ $$(130)\left( \frac{1}{18} \right) + (132)\left( \frac{1}{18} \right) + (133)\left( \frac{1}{18} \right) + (136)\left( \frac{1}{18} \right) + (137)\left( \frac{1}{18} \right) + (141)\left( \frac{2}{18} \right) + (142)\left( \frac{2}{18} \right) + $$ $$ (150)\left( \frac{1}{18} \right) + (152)\left( \frac{1}{18} \right)  = 133.22 $$
+ 
+$$ \sigma = \sqrt{\sigma^2} $$
+$$ \sigma^2 = E[x^2] - \overline{x}^2 $$
+
+$$E[x^2] = \sum x^2 f(x)= (118)^2\left( \frac{1}{18} \right) + (119)^2\left( \frac{1}{18} \right) + (120)^2\left( \frac{1}{18} \right) + (122)^2\left( \frac{1}{18} \right) + (127)^2\left( \frac{2}{18} \right) + $$ $$ (129)^2\left( \frac{1}{18} \right) + (130)^2\left( \frac{1}{18} \right) + (132)^2\left( \frac{1}{18} \right) + (133)^2\left( \frac{1}{18} \right) + (136)^2\left( \frac{1}{18} \right) + (137)^2\left( \frac{1}{18} \right) + (141)^2\left( \frac{2}{18} \right) $$ $$ (142)^2\left( \frac{2}{18} \right) + (150)^2\left( \frac{1}{18} \right) + (152)^2\left( \frac{1}{18} \right)  = 19096.66 $$
+\\
+Entonces, $ \sigma^2 = 19096.66 -(133.22)^2 = 1349.09 $ y $\sigma = \sqrt{1349.09} = \pm 36.73 $ \\
+Por lo tanto, tenemos los elementos para poder hacer un intervalo, donde: \\
+ - $ \overline{x} = 133.22$ \\ - $ \sigma = 16907.25$ \\ - $ n = 18 $ \\ - $  \alpha = 93$ \\ Entonces: 
+$$ Z_{ \frac{100-93}{2} }  =  Z_{ \frac{7}{2} } = Z_{0.035} = -1.81 $$  $$ Z_{0.965} = 1.81 $$
+
+Por lo tanto, el intervalo está dado por: 
+$$ \left( 133.22 - (1.81) \left( \frac{36.73}{\sqrt{18}} \right) \leq  \mu \leq 133.22 + (1.81) \left( \frac{36.73}{\sqrt{18}} \right) \right)  \Rightarrow  \left( 117.53 \leq \mu \leq 148.86 \right) \Rightarrow \left( 117,149 \right) $$
+
+\paragraph{Ejercicio 2}
+Un ingeniero civil quiere medir la potencia comprensiva de dos tipos diferentes de concreto. Una muestra aleatoria de 10 especimenes del primer tipo dio los datos siguientes:
+
+\begin{center} Tipo 1 \ 3250, \ 3268, \ 4302, \ 3184, \ 3266, \\
+\ \ \ \ \ \ \ \ \ \ \ 3297, \ 3332, \ 3502, \ 3064, \ 3116. 
+\end{center}
+mientras que una muestra de 10 especimenes del segundo tipo dio los resultados siguientes:
+
+\begin{center} Tipo 2 \ 3094, \ 3106, \ 3004, \ 3066, \ 2984, \\
+\ \ \ \ \ \ \ \ \ \ \ 3124, \ 3316, \ 3212, \ 3380, \ 3018. 
+\end{center}
+
+Determine un intervalo de confianza del 92\% para la diferencia entre las medias. \\
+
+\textit{Solución: } \\
+Para el tipo 1:
+$$ \overline{x_{1}} = \sum x_{1}f(x_{1})= (3250)\left( \frac{1}{10} \right) + (3268)\left( \frac{1}{10} \right) + (4302)\left( \frac{1}{10} \right) + (3184)\left( \frac{1}{10} \right) + (3266)\left( \frac{1}{10} \right) $$ $$ +  (3297)\left( \frac{1}{10} \right) + (3332)\left( \frac{1}{10} \right)+ (3502)\left( \frac{1}{10} \right) + (3064)\left( \frac{1}{10} \right) + (3116)\left( \frac{1}{10} \right) = 3358.1 $$
+\\
+Entonces
+
+$$ \sigma_{1} = \sqrt{\sigma_{1}^2} $$
+$$ \sigma_{1}^2 = E[x_{1}^2] - \overline{x_{1}}^2 $$
+
+$$ E[x_{1}^2] = \sum x_{1}^2f(x_{1})= (3250)^2\left( \frac{1}{10} \right) + (3268)^2\left( \frac{1}{10} \right) + (4302)^2\left( \frac{1}{10} \right) + (3184)^2\left( \frac{1}{10} \right) + (3266)^2\left( \frac{1}{10} \right) $$ $$ +  (3297)^2\left( \frac{1}{10} \right) +(3332)^2\left( \frac{1}{10} \right)+ (3502)^2\left( \frac{1}{10} \right) + (3064)^2\left( \frac{1}{10} \right) + (3116)^2\left( \frac{1}{10} \right) = 11388812.9 $$
+
+Entonces, $ \sigma_{1}^2 = 11388812.9 -(3358.1)^2 = 111977.29 $ y $\sigma_{1} = \sqrt{111977.29} = \pm 334.63 $ \\
+
+Para el tipo 2:
+$$ \overline{x_{2}} = \sum x_{2}f(x_{2})= (3094)\left( \frac{1}{10} \right) + (3106)\left( \frac{1}{10} \right) + (3004)\left( \frac{1}{10} \right) + (3066)\left( \frac{1}{10} \right) + (2984)\left( \frac{1}{10} \right) $$ $$ +  (3124)\left( \frac{1}{10} \right) + (3316)\left( \frac{1}{10} \right)+ (3212)\left( \frac{1}{10} \right) + (3380)\left( \frac{1}{10} \right) + (3018)\left( \frac{1}{10} \right) = 3130.4 $$
+\\
+Entonces
+
+$$ \sigma_{2} = \sqrt{\sigma_{2}^2} $$
+$$ \sigma_{2}^2 = E[x_{2}^2] - \overline{x_{2}}^2 $$
+
+$$ E[x_{2}^2] = \sum x_{2}^2f(x_{2})= (3094)^2\left( \frac{1}{10} \right) + (3106)^2\left( \frac{1}{10} \right) + (3004)^2\left( \frac{1}{10} \right) + (3066)^2\left( \frac{1}{10} \right) + (2984)^2\left( \frac{1}{10} \right) $$ $$ +  (3124)^2\left( \frac{1}{10} \right) +(3316)^2\left( \frac{1}{10} \right)+ (3212)^2\left( \frac{1}{10} \right) + (3380)^2\left( \frac{1}{10} \right) + (3018)^2\left( \frac{1}{10} \right) = 9815360 $$
+
+Entonces, $ \sigma_{2}^2 = 9815360 -(3130.4)^2 = 15955.84 $ y $\sigma_{2} = \sqrt{15955.84} = \pm 126.31 $ \\
+
+Por lo tanto, tenemos los elementos para poder hacer un intervalo, donde: \\
+- $ \overline{x_{1}} = 3358.1$ \\ 
+- $ \overline{x_{2}} = 3130.4 $ \\
+- $ \sigma_{1} = 334.63 $ \\ 
+- $ \sigma_{2} = 126.31 $ \\ 
+- $ n = 10 $ \\ 
+- $  \alpha = 92$ \\
+
+Entonces: 
+$$ Z_{ \frac{100-92}{2} }  =  Z_{4} = Z_{0.04} = -1.75 $$  $$ Z_{0.96} = 1.75 $$
+
+Por lo tanto, el intervalo está dado por: 
+$$ \left( ( \overline{x_{1}} - \overline{x_{2}} ) - \left( 1.75 \right) \sqrt{\frac{111977.29-15955.84}{10^2}} \leq \mu_{1} - \mu_{2} \leq    (\overline{x_{1}} - \overline{x_{2}}) + \left( 1.75 \right) \sqrt{\frac{111977.29-15955.84}{10^2}}         \right)  $$
+
+$$(165.0706 \leq \mu_{1} - \mu_{2} \leq 290.7293) \Rightarrow (165,291)  $$ 
+
+\paragraph{Ejercicio 3}
+Con la finalidad de estimar la proporción de recién nacidos que son varones, se registró el género de 10 000 niños recién nacidos. Si de éstos 4 000 fueron varones, determine un intervalo de confianza del 96\% para la proporción real. \\
+
+\textit{Solución: } \\
+Tenemos los elementos para poder hacer un intervalo, donde: \\
+- $ n = 10000 $ \\
+- $ p = 0.4 $ \\ 
+- $ q = 0.6 $ \\ 
+- $ \alpha = 96 $ \\ \\
+- $ \overline{x} = np = (10000)(0.4) = 4000 $ \\
+- $ \sigma^2 = npq = (10000)(0.4)(0.6) = 2400  \Rightarrow \sigma = \sqrt{\sigma^2} = \sqrt{2400} = 48.99 $ \\
+
+\begin{center}
+$ Z_{\frac{100 \pm \alpha}{2}} \Rightarrow  Z_{\frac{100-96}{2}} = Z_{0.02} = -2.05 $ y $ Z_{\frac{100+96}{2}} = Z_{0.98} = 2.05  $ 
+\end{center}
+Por lo tanto, el intervalo está dado por: 
+
+$$  \left(   4000 - (2.05)\left( \frac{48.9897}{\sqrt{10000}} \right)   \leq \mu \leq 4000 + (2.05)\left( \frac{48.9897}{\sqrt{10000}} \right)      \right)   \Rightarrow (3998,4002) $$
+
+
+\paragraph{Ejercicio 4}
+A un coche se le hace publicidad afirmando que tiene un rendimiento en carretera de por lo menos 30 millas por galón. Si las millas por galón que se obtuvieron en 10 experimentos son 26, 24, 20, 25, 27, 25, 28, 30, 26, 33, ¿creería usted en lo que dice la publicidad en un 90\%? \\
+
+\textit{Solución: } 
+$$ \overline{x} = \sum xf(x)= (20)\left( \frac{1}{10} \right) + (24)\left( \frac{1}{10} \right) + (25)\left( \frac{2}{10} \right) + (26)\left( \frac{2}{10} \right) + (27)\left( \frac{1}{10} \right) $$ $$ +  (28)\left( \frac{1}{10} \right) + (30)\left( \frac{1}{10} \right)+ (33)\left( \frac{1}{10} \right) = 26.4 $$
+
+ 
+$$ \sigma = \sqrt{\sigma^2} $$
+$$ \sigma^2 = E[x^2] - \overline{x}^2 $$
+
+$$ E[x^2] = \sum x^2f(x)= (20^2)\left( \frac{1}{10} \right) + (24)^2\left( \frac{1}{10} \right) + (25)^2\left( \frac{2}{10} \right) + (26)^2\left( \frac{2}{10} \right) + (27)^2\left( \frac{1}{10} \right) $$ $$ +  (28)^2\left( \frac{1}{10} \right) + (30)^2\left( \frac{1}{10} \right)+ (33)^2\left( \frac{1}{10} \right) = 708 $$
+
+Entonces, $ \sigma^2 = 708 - (26.4)^2 = 11.04  \Rightarrow \sigma = \sqrt{\sigma^2} = \sqrt{11.04} = \pm 3.322$ \\
+
+\begin{center}
+$ Z_{\frac{100 \pm \alpha}{2}} \Rightarrow  Z_{\frac{100-90}{2}} = Z_{0.05} = -1.64 $ y $ Z_{\frac{100+90}{2}} = Z_{0.95} = 1.64   $ 
+\end{center}
+
+Ahora, con los datos dados $ Z = \frac{26.4 - 30}{\frac{3.322}{\sqrt{10}}} = -3.426 $ lo cual excede el rango y no es de confianza.
+
+
+\end{document}
